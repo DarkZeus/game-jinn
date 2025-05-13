@@ -11,15 +11,78 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as StatisticsImport } from './routes/statistics'
+import { Route as SettingsImport } from './routes/settings'
+import { Route as ProgressImport } from './routes/progress'
+import { Route as NotesImport } from './routes/notes'
+import { Route as GamesImport } from './routes/games'
+import { Route as FavoritesImport } from './routes/favorites'
+import { Route as CalendarImport } from './routes/calendar'
+import { Route as AchievementsImport } from './routes/achievements'
 import { Route as IndexImport } from './routes/index'
+import { Route as GamesGameIdImport } from './routes/games.$gameId'
 import { Route as DemoTanstackQueryImport } from './routes/demo.tanstack-query'
 
 // Create/Update Routes
+
+const StatisticsRoute = StatisticsImport.update({
+  id: '/statistics',
+  path: '/statistics',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SettingsRoute = SettingsImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProgressRoute = ProgressImport.update({
+  id: '/progress',
+  path: '/progress',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const NotesRoute = NotesImport.update({
+  id: '/notes',
+  path: '/notes',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const GamesRoute = GamesImport.update({
+  id: '/games',
+  path: '/games',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const FavoritesRoute = FavoritesImport.update({
+  id: '/favorites',
+  path: '/favorites',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CalendarRoute = CalendarImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AchievementsRoute = AchievementsImport.update({
+  id: '/achievements',
+  path: '/achievements',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
+} as any)
+
+const GamesGameIdRoute = GamesGameIdImport.update({
+  id: '/$gameId',
+  path: '/$gameId',
+  getParentRoute: () => GamesRoute,
 } as any)
 
 const DemoTanstackQueryRoute = DemoTanstackQueryImport.update({
@@ -39,6 +102,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/achievements': {
+      id: '/achievements'
+      path: '/achievements'
+      fullPath: '/achievements'
+      preLoaderRoute: typeof AchievementsImport
+      parentRoute: typeof rootRoute
+    }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarImport
+      parentRoute: typeof rootRoute
+    }
+    '/favorites': {
+      id: '/favorites'
+      path: '/favorites'
+      fullPath: '/favorites'
+      preLoaderRoute: typeof FavoritesImport
+      parentRoute: typeof rootRoute
+    }
+    '/games': {
+      id: '/games'
+      path: '/games'
+      fullPath: '/games'
+      preLoaderRoute: typeof GamesImport
+      parentRoute: typeof rootRoute
+    }
+    '/notes': {
+      id: '/notes'
+      path: '/notes'
+      fullPath: '/notes'
+      preLoaderRoute: typeof NotesImport
+      parentRoute: typeof rootRoute
+    }
+    '/progress': {
+      id: '/progress'
+      path: '/progress'
+      fullPath: '/progress'
+      preLoaderRoute: typeof ProgressImport
+      parentRoute: typeof rootRoute
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsImport
+      parentRoute: typeof rootRoute
+    }
+    '/statistics': {
+      id: '/statistics'
+      path: '/statistics'
+      fullPath: '/statistics'
+      preLoaderRoute: typeof StatisticsImport
+      parentRoute: typeof rootRoute
+    }
     '/demo/tanstack-query': {
       id: '/demo/tanstack-query'
       path: '/demo/tanstack-query'
@@ -46,43 +165,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoTanstackQueryImport
       parentRoute: typeof rootRoute
     }
+    '/games/$gameId': {
+      id: '/games/$gameId'
+      path: '/$gameId'
+      fullPath: '/games/$gameId'
+      preLoaderRoute: typeof GamesGameIdImport
+      parentRoute: typeof GamesImport
+    }
   }
 }
 
 // Create and export the route tree
 
+interface GamesRouteChildren {
+  GamesGameIdRoute: typeof GamesGameIdRoute
+}
+
+const GamesRouteChildren: GamesRouteChildren = {
+  GamesGameIdRoute: GamesGameIdRoute,
+}
+
+const GamesRouteWithChildren = GamesRoute._addFileChildren(GamesRouteChildren)
+
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/achievements': typeof AchievementsRoute
+  '/calendar': typeof CalendarRoute
+  '/favorites': typeof FavoritesRoute
+  '/games': typeof GamesRouteWithChildren
+  '/notes': typeof NotesRoute
+  '/progress': typeof ProgressRoute
+  '/settings': typeof SettingsRoute
+  '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/games/$gameId': typeof GamesGameIdRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/achievements': typeof AchievementsRoute
+  '/calendar': typeof CalendarRoute
+  '/favorites': typeof FavoritesRoute
+  '/games': typeof GamesRouteWithChildren
+  '/notes': typeof NotesRoute
+  '/progress': typeof ProgressRoute
+  '/settings': typeof SettingsRoute
+  '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/games/$gameId': typeof GamesGameIdRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/achievements': typeof AchievementsRoute
+  '/calendar': typeof CalendarRoute
+  '/favorites': typeof FavoritesRoute
+  '/games': typeof GamesRouteWithChildren
+  '/notes': typeof NotesRoute
+  '/progress': typeof ProgressRoute
+  '/settings': typeof SettingsRoute
+  '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/games/$gameId': typeof GamesGameIdRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/demo/tanstack-query'
+  fullPaths:
+    | '/'
+    | '/achievements'
+    | '/calendar'
+    | '/favorites'
+    | '/games'
+    | '/notes'
+    | '/progress'
+    | '/settings'
+    | '/statistics'
+    | '/demo/tanstack-query'
+    | '/games/$gameId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/demo/tanstack-query'
-  id: '__root__' | '/' | '/demo/tanstack-query'
+  to:
+    | '/'
+    | '/achievements'
+    | '/calendar'
+    | '/favorites'
+    | '/games'
+    | '/notes'
+    | '/progress'
+    | '/settings'
+    | '/statistics'
+    | '/demo/tanstack-query'
+    | '/games/$gameId'
+  id:
+    | '__root__'
+    | '/'
+    | '/achievements'
+    | '/calendar'
+    | '/favorites'
+    | '/games'
+    | '/notes'
+    | '/progress'
+    | '/settings'
+    | '/statistics'
+    | '/demo/tanstack-query'
+    | '/games/$gameId'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AchievementsRoute: typeof AchievementsRoute
+  CalendarRoute: typeof CalendarRoute
+  FavoritesRoute: typeof FavoritesRoute
+  GamesRoute: typeof GamesRouteWithChildren
+  NotesRoute: typeof NotesRoute
+  ProgressRoute: typeof ProgressRoute
+  SettingsRoute: typeof SettingsRoute
+  StatisticsRoute: typeof StatisticsRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AchievementsRoute: AchievementsRoute,
+  CalendarRoute: CalendarRoute,
+  FavoritesRoute: FavoritesRoute,
+  GamesRoute: GamesRouteWithChildren,
+  NotesRoute: NotesRoute,
+  ProgressRoute: ProgressRoute,
+  SettingsRoute: SettingsRoute,
+  StatisticsRoute: StatisticsRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
 }
 
@@ -97,14 +310,53 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/achievements",
+        "/calendar",
+        "/favorites",
+        "/games",
+        "/notes",
+        "/progress",
+        "/settings",
+        "/statistics",
         "/demo/tanstack-query"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
+    "/achievements": {
+      "filePath": "achievements.tsx"
+    },
+    "/calendar": {
+      "filePath": "calendar.tsx"
+    },
+    "/favorites": {
+      "filePath": "favorites.tsx"
+    },
+    "/games": {
+      "filePath": "games.tsx",
+      "children": [
+        "/games/$gameId"
+      ]
+    },
+    "/notes": {
+      "filePath": "notes.tsx"
+    },
+    "/progress": {
+      "filePath": "progress.tsx"
+    },
+    "/settings": {
+      "filePath": "settings.tsx"
+    },
+    "/statistics": {
+      "filePath": "statistics.tsx"
+    },
     "/demo/tanstack-query": {
       "filePath": "demo.tanstack-query.tsx"
+    },
+    "/games/$gameId": {
+      "filePath": "games.$gameId.tsx",
+      "parent": "/games"
     }
   }
 }
