@@ -1,0 +1,173 @@
+[
+    {
+      "id": 302704,
+      "age_ratings": [
+        205380,
+        205381,
+        205378,
+        205379,
+        196871,
+        205377,
+        196872
+      ],
+      "aggregated_rating": 86.5,
+      "aggregated_rating_count": 4,
+      "alternative_names": [
+        153193
+      ],
+      "artworks": [
+        139353
+      ],
+      "category": 0,
+      "cover": 434292,
+      "created_at": 1716735234,
+      "external_games": [
+        2922319,
+        2922355,
+        3023863,
+        2978038
+      ],
+      "first_release_date": 1747267200,
+      "franchises": [
+        798
+      ],
+      "game_engines": [
+        1785
+      ],
+      "game_modes": [
+        1
+      ],
+      "genres": [
+        5
+      ],
+      "hypes": 197,
+      "involved_companies": [
+        269683,
+        269684
+      ],
+      "keywords": [
+        129,
+        472,
+        1069,
+        1308
+      ],
+      "name": "Doom: The Dark Ages",
+      "platforms": [
+        169,
+        6,
+        167
+      ],
+      "player_perspectives": [
+        1
+      ],
+      "rating": 89.63021773782754,
+      "rating_count": 6,
+      "release_dates": [
+        694060,
+        694057,
+        694058,
+        694059
+      ],
+      "screenshots": [
+        1338046,
+        1338030,
+        1338032,
+        1338033,
+        1338031,
+        1338047
+      ],
+      "similar_games": [
+        103298,
+        55038,
+        19164,
+        105269,
+        68286,
+        107318,
+        103301,
+        57187,
+        28070,
+        47823
+      ],
+      "slug": "doom-the-dark-ages",
+      "summary": "DOOM: The Dark Ages is the prequel to the critically acclaimed DOOM (2016) and DOOM Eternal that tells the epic cinematic origin story of the DOOM Slayer’s rage. Players will step into the blood-stained boots of the DOOM Slayer, in this never-before-seen dark and sinister medieval war against Hell.",
+      "tags": [
+        1,
+        17,
+        18,
+        268435461,
+        536871041,
+        536871384,
+        536871981,
+        536872220
+      ],
+      "themes": [
+        1,
+        17,
+        18
+      ],
+      "total_rating": 88.06510886891377,
+      "total_rating_count": 10,
+      "updated_at": 1747475758,
+      "url": "https://www.igdb.com/games/doom-the-dark-ages",
+      "videos": [
+        115699,
+        138635,
+        138636,
+        146713,
+        149518
+      ],
+      "websites": [
+        791509,
+        791508,
+        752564,
+        752565,
+        753562,
+        644163,
+        706528,
+        706529,
+        706530,
+        706531,
+        644116,
+        706533,
+        706527
+      ],
+      "checksum": "912a2759-d8fb-f3ba-ed20-12ffdab94757",
+      "language_supports": [
+        1019854,
+        1019855,
+        1019856,
+        1154134,
+        1154135,
+        1154136,
+        1154137,
+        1154138,
+        1154139,
+        1154140,
+        1154141,
+        1154142,
+        1154143,
+        1154144,
+        1154145,
+        1154146,
+        1154147,
+        1154148,
+        1154149,
+        1154150,
+        1154151,
+        1154152,
+        1154153,
+        1154154,
+        1154155,
+        1154156,
+        1154157,
+        1154158,
+        1154159,
+        1154160,
+        1154161
+      ],
+      "collections": [
+        129
+      ],
+      "game_type": 0
+    }
+  ]
