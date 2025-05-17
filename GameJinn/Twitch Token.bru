@@ -1,0 +1,17 @@
+meta {
+  name: Twitch Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://id.twitch.tv/oauth2/token?client_id={{ClientID}}&client_secret={{ClientSecret}}&grant_type=client_credentials
+  body: none
+  auth: inherit
+}
+
+params:query {
+  client_id: {{ClientID}}
+  client_secret: {{ClientSecret}}
+  grant_type: client_credentials
+}
