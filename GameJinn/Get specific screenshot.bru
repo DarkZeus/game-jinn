@@ -1,0 +1,21 @@
+meta {
+  name: Get specific screenshot
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://api.igdb.com/v4/screenshots
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  fields *; where game = 302704;
+}

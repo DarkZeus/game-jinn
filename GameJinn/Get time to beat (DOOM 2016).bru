@@ -1,11 +1,11 @@
 meta {
-  name: Get all games
+  name: Get time to beat (DOOM 2016)
   type: http
-  seq: 2
+  seq: 6
 }
 
 post {
-  url: https://api.igdb.com/v4/games
+  url: https://api.igdb.com/v4/game_time_to_beats
   body: text
   auth: inherit
 }
@@ -17,5 +17,6 @@ headers {
 }
 
 body:text {
-  fields *; limit 10; where id = 302704;
+  fields *;
+  where game_id = 7351;
 }

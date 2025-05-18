@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1338032,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofk",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofk.jpg",
+      "width": 1920,
+      "checksum": "249269f5-09a4-a5d9-2a20-5e370e72a64f"
+    },
+    {
+      "id": 1338031,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofj",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofj.jpg",
+      "width": 1920,
+      "checksum": "ee38d44d-3ba3-986b-d4b0-76c6c1b530ea"
+    },
+    {
+      "id": 1338030,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofi",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofi.jpg",
+      "width": 1920,
+      "checksum": "6be41ad7-5105-8a08-193b-f16d30af98b2"
+    },
+    {
+      "id": 1338047,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofz",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofz.jpg",
+      "width": 1920,
+      "checksum": "e65df873-2990-82de-b92e-8d6dea99c2c9"
+    },
+    {
+      "id": 1338033,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofl",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofl.jpg",
+      "width": 1920,
+      "checksum": "19970c03-340e-030e-c748-b14d8eb093b4"
+    },
+    {
+      "id": 1338046,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 302704,
+      "height": 1080,
+      "image_id": "scsofy",
+      "url": "//images.igdb.com/igdb/image/upload/t_thumb/scsofy.jpg",
+      "width": 1920,
+      "checksum": "5649ff57-9fd7-8b71-d4f7-4be8c8b74e35"
+    }
+  ]

@@ -1,0 +1,24 @@
+meta {
+  name: Get specific game (DOOM 2016)
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://api.igdb.com/v4/games
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  fields *,
+  time_to_beat;
+  where id = 7351;
+  exclude artworks;
+}

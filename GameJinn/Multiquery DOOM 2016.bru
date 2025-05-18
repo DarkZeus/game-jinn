@@ -1,0 +1,52 @@
+meta {
+  name: Multiquery DOOM 2016
+  type: http
+  seq: 11
+}
+
+post {
+  url: https://api.igdb.com/v4/multiquery
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  query games "Games" {
+    fields *,
+      websites.url,
+      websites.category,
+      cover.image_id,
+      cover.url,
+      screenshots.image_id,
+      screenshots.url,
+      alternative_names.name,
+      franchises.*,
+      game_engines.*,
+      genres.*,
+      game_modes.*,
+      involved_companies.*,
+      involved_companies.company.name,
+      keywords.name,
+      platforms.name,
+      player_perspectives.*,
+      similar_games.*,
+      videos.name,
+      videos.video_id,
+      language_supports.language.name,
+      language_supports.language.native_name;
+    where id = 7351;
+    limit 1;
+    exclude tags;
+  };
+  
+  query game_time_to_beats "Game with time to beat" {
+    fields *;
+    where game_id = 7351;
+  };
+}

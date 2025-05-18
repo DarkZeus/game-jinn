@@ -1,0 +1,21 @@
+meta {
+  name: Get specific platforms
+  type: http
+  seq: 10
+}
+
+post {
+  url: https://api.igdb.com/v4/platforms
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  fields *; where id = (48,6,49);
+}

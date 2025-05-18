@@ -1,0 +1,21 @@
+meta {
+  name: Get specific artwork
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://api.igdb.com/v4/artworks
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  fields *; where id = 139353;
+}

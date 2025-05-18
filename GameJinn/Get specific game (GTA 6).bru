@@ -1,0 +1,40 @@
+meta {
+  name: Get specific game (GTA 6)
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://api.igdb.com/v4/games
+  body: text
+  auth: inherit
+}
+
+headers {
+  authorization: Bearer {{Token}}
+  client-id: {{ClientID}}
+  content-type: text/plain
+}
+
+body:text {
+  fields *,
+    websites.*,
+    cover.image_id,
+    cover.url,
+    screenshots.image_id,
+    screenshots.url,
+    alternative_names.name,
+    franchises.*,
+    game_engines.*,
+    genres.*,
+    game_modes.*,
+    involved_companies.*,
+    involved_companies.company.name,
+    keywords.*,
+    platforms.name,
+    player_perspectives.*,
+    similar_games.*,
+    videos.*;
+  where id = 52189;
+  exclude artworks;
+}

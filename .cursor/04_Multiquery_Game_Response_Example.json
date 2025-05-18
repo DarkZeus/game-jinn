@@ -1,0 +1,1212 @@
+[
+  {
+    "name": "Games",
+    "result": [
+      {
+        "id": 7351,
+        "age_ratings": [
+          35264,
+          69617,
+          79167,
+          79168,
+          92322,
+          79166,
+          189114
+        ],
+        "aggregated_rating": 86.96875,
+        "aggregated_rating_count": 28,
+        "alternative_names": [
+          {
+            "id": 52730,
+            "name": "Doom (2016)"
+          },
+          {
+            "id": 69858,
+            "name": "Doom 4"
+          },
+          {
+            "id": 69859,
+            "name": "Doom IV"
+          },
+          {
+            "id": 69860,
+            "name": "Doom Classic"
+          },
+          {
+            "id": 130006,
+            "name": "DOOM"
+          }
+        ],
+        "artworks": [
+          {
+            "id": 7314,
+            "image_id": "ar5n6",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar5n6.jpg"
+          },
+          {
+            "id": 2664,
+            "image_id": "v5k9tattgspoxtgyqkn1",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/v5k9tattgspoxtgyqkn1.jpg"
+          },
+          {
+            "id": 2665,
+            "image_id": "ftyj9da8qkqylcdauh0c",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ftyj9da8qkqylcdauh0c.jpg"
+          },
+          {
+            "id": 2663,
+            "image_id": "fx7kjtcwrzfo1aekrpbr",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/fx7kjtcwrzfo1aekrpbr.jpg"
+          },
+          {
+            "id": 2668,
+            "image_id": "s5dcira6sexyq57nefy6",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/s5dcira6sexyq57nefy6.jpg"
+          },
+          {
+            "id": 2666,
+            "image_id": "c7fgtkmb1zk3e0kobng7",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/c7fgtkmb1zk3e0kobng7.jpg"
+          },
+          {
+            "id": 2669,
+            "image_id": "cbsblb3kv3zecvrjy5us",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/cbsblb3kv3zecvrjy5us.jpg"
+          },
+          {
+            "id": 2670,
+            "image_id": "mavvejxtjxt8hhlkiwcb",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/mavvejxtjxt8hhlkiwcb.jpg"
+          },
+          {
+            "id": 2671,
+            "image_id": "rutlchhfhfdl3oia20r5",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/rutlchhfhfdl3oia20r5.jpg"
+          },
+          {
+            "id": 2672,
+            "image_id": "trn7cqzflqx84att97hr",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/trn7cqzflqx84att97hr.jpg"
+          },
+          {
+            "id": 5802,
+            "image_id": "ar4h6",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ar4h6.jpg"
+          }
+        ],
+        "bundles": [
+          276330,
+          136004,
+          332005
+        ],
+        "category": 0,
+        "cover": {
+          "id": 76903,
+          "image_id": "co1nc7",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/co1nc7.jpg"
+        },
+        "created_at": 1402437384,
+        "dlcs": [
+          {
+            "id": 25571,
+            "name": "Doom: Hell Followed"
+          },
+          {
+            "id": 26558,
+            "name": "Doom: Bloodfall"
+          },
+          {
+            "id": 22431,
+            "name": "Doom: Unto the Evil"
+          }
+        ],
+        "external_games": [
+          1934827,
+          1237064,
+          96073,
+          79525,
+          210461,
+          2087105,
+          2452790,
+          400281,
+          138274,
+          1930257,
+          83568,
+          245203,
+          1930098,
+          1932010,
+          2588310,
+          2588534,
+          3002571,
+          8104,
+          2176160,
+          1937369,
+          189465,
+          2220483,
+          2162825
+        ],
+        "first_release_date": 1463011200,
+        "franchises": [
+          {
+            "id": 798,
+            "name": "Doom"
+          }
+        ],
+        "game_engines": [
+          {
+            "id": 172,
+            "name": "id Tech 6"
+          }
+        ],
+        "game_modes": [
+          {
+            "id": 1,
+            "name": "Single player"
+          },
+          {
+            "id": 2,
+            "name": "Multiplayer"
+          },
+          {
+            "id": 3,
+            "name": "Co-operative"
+          }
+        ],
+        "genres": [
+          {
+            "id": 5,
+            "name": "Shooter"
+          },
+          {
+            "id": 9,
+            "name": "Puzzle"
+          }
+        ],
+        "hypes": 29,
+        "involved_companies": [
+          {
+            "id": 198290,
+            "company": {
+              "id": 3029,
+              "name": "BattleCry Studios"
+            },
+            "developer": false,
+            "publisher": false
+          },
+          {
+            "id": 198292,
+            "company": {
+              "id": 57,
+              "name": "Certain Affinity"
+            },
+            "developer": false,
+            "publisher": false
+          },
+          {
+            "id": 198294,
+            "company": {
+              "id": 3894,
+              "name": "ZeniMax Germany"
+            },
+            "developer": false,
+            "publisher": false
+          },
+          {
+            "id": 198295,
+            "company": {
+              "id": 1242,
+              "name": "MachineGames"
+            },
+            "developer": false,
+            "publisher": false
+          },
+          {
+            "id": 198288,
+            "company": {
+              "id": 184,
+              "name": "id Software"
+            },
+            "developer": true,
+            "publisher": false
+          },
+          {
+            "id": 198289,
+            "company": {
+              "id": 16565,
+              "name": "Bethesda Softworks"
+            },
+            "developer": false,
+            "publisher": true
+          },
+          {
+            "id": 198293,
+            "company": {
+              "id": 2145,
+              "name": "Tango Gameworks"
+            },
+            "developer": false,
+            "publisher": false
+          },
+          {
+            "id": 198291,
+            "company": {
+              "id": 7717,
+              "name": "Escalation Studios"
+            },
+            "developer": false,
+            "publisher": false
+          }
+        ],
+        "keywords": [
+          {
+            "id": 3,
+            "name": "aliens"
+          },
+          {
+            "id": 129,
+            "name": "bloody"
+          },
+          {
+            "id": 175,
+            "name": "demon"
+          },
+          {
+            "id": 274,
+            "name": "minigames"
+          },
+          {
+            "id": 558,
+            "name": "death"
+          },
+          {
+            "id": 578,
+            "name": "permadeath"
+          },
+          {
+            "id": 905,
+            "name": "difficult"
+          },
+          {
+            "id": 923,
+            "name": "futuristic"
+          },
+          {
+            "id": 977,
+            "name": "hand-to-hand combat"
+          },
+          {
+            "id": 1069,
+            "name": "demons"
+          },
+          {
+            "id": 1158,
+            "name": "steam"
+          },
+          {
+            "id": 1293,
+            "name": "achievements"
+          },
+          {
+            "id": 1299,
+            "name": "time limit"
+          },
+          {
+            "id": 1308,
+            "name": "gore"
+          },
+          {
+            "id": 1333,
+            "name": "online"
+          },
+          {
+            "id": 1898,
+            "name": "easter egg"
+          },
+          {
+            "id": 1986,
+            "name": "teleportation"
+          },
+          {
+            "id": 2153,
+            "name": "heavy metal"
+          },
+          {
+            "id": 2199,
+            "name": "silent protagonist"
+          },
+          {
+            "id": 2498,
+            "name": "cult"
+          },
+          {
+            "id": 2543,
+            "name": "playstation network"
+          },
+          {
+            "id": 2746,
+            "name": "drone"
+          },
+          {
+            "id": 3203,
+            "name": "darkness"
+          },
+          {
+            "id": 3486,
+            "name": "boss fight"
+          },
+          {
+            "id": 3831,
+            "name": "explosion"
+          },
+          {
+            "id": 4004,
+            "name": "steam achievements"
+          },
+          {
+            "id": 4134,
+            "name": "digital distribution"
+          },
+          {
+            "id": 4150,
+            "name": "steam cloud"
+          },
+          {
+            "id": 4213,
+            "name": "countdown timer"
+          },
+          {
+            "id": 4245,
+            "name": "playstation trophies"
+          },
+          {
+            "id": 4282,
+            "name": "60 fps on consoles"
+          },
+          {
+            "id": 4345,
+            "name": "bink video"
+          },
+          {
+            "id": 4351,
+            "name": "demon invasion"
+          },
+          {
+            "id": 4353,
+            "name": "human"
+          },
+          {
+            "id": 4357,
+            "name": "xbox one x enhanced"
+          },
+          {
+            "id": 4397,
+            "name": "upgradeable weapons"
+          },
+          {
+            "id": 4465,
+            "name": "deliberately retro"
+          },
+          {
+            "id": 4467,
+            "name": "block matching"
+          },
+          {
+            "id": 4473,
+            "name": "photo mode"
+          },
+          {
+            "id": 4484,
+            "name": "collectibles"
+          },
+          {
+            "id": 4544,
+            "name": "unlockables"
+          },
+          {
+            "id": 4580,
+            "name": "wasd movement"
+          },
+          {
+            "id": 4586,
+            "name": "color separation"
+          },
+          {
+            "id": 4614,
+            "name": "extreme violence"
+          },
+          {
+            "id": 4621,
+            "name": "hologram"
+          },
+          {
+            "id": 4623,
+            "name": "fake in-game advertising"
+          },
+          {
+            "id": 4637,
+            "name": "corpse"
+          },
+          {
+            "id": 4724,
+            "name": "arena combat"
+          },
+          {
+            "id": 4777,
+            "name": "checkpoints"
+          },
+          {
+            "id": 4781,
+            "name": "falling damage"
+          },
+          {
+            "id": 4871,
+            "name": "pax east 2016"
+          },
+          {
+            "id": 4890,
+            "name": "xbox live"
+          },
+          {
+            "id": 4891,
+            "name": "melee"
+          },
+          {
+            "id": 4918,
+            "name": "real-time combat"
+          },
+          {
+            "id": 4989,
+            "name": "in-game map editor"
+          },
+          {
+            "id": 4991,
+            "name": "secret area"
+          },
+          {
+            "id": 4992,
+            "name": "infinite ammo"
+          },
+          {
+            "id": 4993,
+            "name": "invisible enemy"
+          },
+          {
+            "id": 4998,
+            "name": "betrayal"
+          },
+          {
+            "id": 5029,
+            "name": "difficulty level"
+          },
+          {
+            "id": 5105,
+            "name": "multi-phase boss"
+          },
+          {
+            "id": 5164,
+            "name": "self-referential humor"
+          },
+          {
+            "id": 5175,
+            "name": "female antagonist"
+          },
+          {
+            "id": 5254,
+            "name": "d.i.c.e. awards 2017"
+          },
+          {
+            "id": 5257,
+            "name": "audio logs"
+          },
+          {
+            "id": 5264,
+            "name": "vending machine interaction"
+          },
+          {
+            "id": 5343,
+            "name": "e3 2015"
+          },
+          {
+            "id": 5345,
+            "name": "same name reboot"
+          },
+          {
+            "id": 5379,
+            "name": "pax prime 2015"
+          },
+          {
+            "id": 5387,
+            "name": "floating island"
+          },
+          {
+            "id": 5408,
+            "name": "video game characters that play video games"
+          },
+          {
+            "id": 5417,
+            "name": "e3 2013"
+          },
+          {
+            "id": 5425,
+            "name": "arcade cabinet"
+          },
+          {
+            "id": 5523,
+            "name": "leaderboard"
+          },
+          {
+            "id": 5599,
+            "name": "been here before"
+          },
+          {
+            "id": 5638,
+            "name": "development hell"
+          },
+          {
+            "id": 6003,
+            "name": "color blind assist"
+          },
+          {
+            "id": 6137,
+            "name": "linear gameplay"
+          },
+          {
+            "id": 6370,
+            "name": "gore system"
+          },
+          {
+            "id": 6493,
+            "name": "finishing move"
+          },
+          {
+            "id": 6620,
+            "name": "scripted events"
+          },
+          {
+            "id": 6621,
+            "name": "vent crawling"
+          },
+          {
+            "id": 6655,
+            "name": "jumping puzzle"
+          },
+          {
+            "id": 6735,
+            "name": "first-person platforming"
+          },
+          {
+            "id": 6828,
+            "name": "propaganda"
+          },
+          {
+            "id": 7062,
+            "name": "severed limbs"
+          },
+          {
+            "id": 7315,
+            "name": "nameless protagonist"
+          },
+          {
+            "id": 7397,
+            "name": "optional objective"
+          },
+          {
+            "id": 7473,
+            "name": "invented language"
+          },
+          {
+            "id": 7603,
+            "name": "foreshadowing"
+          },
+          {
+            "id": 10048,
+            "name": "pc to console port"
+          },
+          {
+            "id": 10919,
+            "name": "online multiplayer achievements"
+          },
+          {
+            "id": 11827,
+            "name": "lost soul"
+          },
+          {
+            "id": 12556,
+            "name": "the game awards - nominee"
+          },
+          {
+            "id": 14051,
+            "name": "the game awards 2016"
+          },
+          {
+            "id": 14063,
+            "name": "the game awards - best studio or game direction - nominee"
+          },
+          {
+            "id": 14076,
+            "name": "the game awards - best music or sound design - nominee"
+          },
+          {
+            "id": 14079,
+            "name": "the game awards - best music or sound design - winner"
+          },
+          {
+            "id": 16826,
+            "name": "4k ultra hd"
+          },
+          {
+            "id": 23933,
+            "name": "male protagonist"
+          },
+          {
+            "id": 39005,
+            "name": "the game awards - best action game - nominee"
+          },
+          {
+            "id": 39006,
+            "name": "the game awards - best action game - winner"
+          },
+          {
+            "id": 39049,
+            "name": "the game awards - game of the year - nominee"
+          }
+        ],
+        "multiplayer_modes": [
+          8053,
+          7518
+        ],
+        "name": "Doom",
+        "platforms": [
+          {
+            "id": 48,
+            "name": "PlayStation 4"
+          },
+          {
+            "id": 6,
+            "name": "PC (Microsoft Windows)"
+          },
+          {
+            "id": 49,
+            "name": "Xbox One"
+          }
+        ],
+        "player_perspectives": [
+          {
+            "id": 1,
+            "name": "First person"
+          }
+        ],
+        "rating": 85.3886455098497,
+        "rating_count": 1692,
+        "release_dates": [
+          45903,
+          45904,
+          404981
+        ],
+        "screenshots": [
+          {
+            "id": 25076,
+            "image_id": "ztefs6yagwsy7mqadtr6",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ztefs6yagwsy7mqadtr6.jpg"
+          },
+          {
+            "id": 25077,
+            "image_id": "zvgdnda5xvoogorofvmr",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/zvgdnda5xvoogorofvmr.jpg"
+          },
+          {
+            "id": 25078,
+            "image_id": "ae1m6xxg9tprlsh4gvd6",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ae1m6xxg9tprlsh4gvd6.jpg"
+          },
+          {
+            "id": 10815,
+            "image_id": "z8hso07ic2nymktnrdgr",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/z8hso07ic2nymktnrdgr.jpg"
+          },
+          {
+            "id": 10819,
+            "image_id": "ruihyw2ggun3g422i0cg",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/ruihyw2ggun3g422i0cg.jpg"
+          },
+          {
+            "id": 1383668,
+            "image_id": "sctnn8",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/sctnn8.jpg"
+          },
+          {
+            "id": 1383669,
+            "image_id": "sctnn9",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/sctnn9.jpg"
+          },
+          {
+            "id": 1386869,
+            "image_id": "sctq45",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/sctq45.jpg"
+          },
+          {
+            "id": 1386868,
+            "image_id": "sctq44",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/sctq44.jpg"
+          },
+          {
+            "id": 1383671,
+            "image_id": "sctnnb",
+            "url": "//images.igdb.com/igdb/image/upload/t_thumb/sctnnb.jpg"
+          }
+        ],
+        "similar_games": [
+          {
+            "id": 1006,
+            "name": "Syndicate",
+            "slug": "syndicate--3"
+          },
+          {
+            "id": 19531,
+            "name": "Prey",
+            "slug": "prey--1"
+          },
+          {
+            "id": 2031,
+            "name": "Wolfenstein: The New Order",
+            "slug": "wolfenstein-the-new-order"
+          },
+          {
+            "id": 571,
+            "name": "Singularity",
+            "slug": "singularity"
+          },
+          {
+            "id": 533,
+            "name": "Dishonored",
+            "slug": "dishonored"
+          },
+          {
+            "id": 9498,
+            "name": "Deus Ex: Mankind Divided",
+            "slug": "deus-ex-mankind-divided"
+          },
+          {
+            "id": 3188,
+            "name": "Murdered: Soul Suspect",
+            "slug": "murdered-soul-suspect"
+          },
+          {
+            "id": 9727,
+            "name": "Soma",
+            "slug": "soma"
+          },
+          {
+            "id": 11118,
+            "name": "Dishonored 2",
+            "slug": "dishonored-2"
+          },
+          {
+            "id": 7342,
+            "name": "Inside",
+            "slug": "inside"
+          }
+        ],
+        "slug": "doom--2",
+        "storyline": "You’ve come here for a reason. The Union Aerospace Corporation’s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you’ve been activated to do one thing – kill them all.",
+        "summary": "Developed by id software, the studio that pioneered the first-person shooter genre and created multiplayer Deathmatch, Doom returns as a brutally fun and challenging modern-day shooter experience. Relentless demons, impossibly destructive guns, and fast, fluid movement provide the foundation for intense, first-person combat – whether you’re obliterating demon hordes through the depths of Hell in the single-player campaign, or competing against your friends in numerous multiplayer modes. Expand your gameplay experience using Doom SnapMap game editor to easily create, play, and share your content with the world.",
+        "themes": [
+          1,
+          18,
+          19
+        ],
+        "total_rating": 86.17869775492485,
+        "total_rating_count": 1720,
+        "updated_at": 1747577090,
+        "url": "https://www.igdb.com/games/doom--2",
+        "videos": [
+          {
+            "id": 7496,
+            "name": "Campaign Trailer",
+            "video_id": "ybo30QlSk64"
+          },
+          {
+            "id": 2664,
+            "name": "Teaser",
+            "video_id": "MDQM55hYLeY"
+          },
+          {
+            "id": 7497,
+            "name": "Multiplayer Trailer",
+            "video_id": "wny6CF1FTrw"
+          },
+          {
+            "id": 8342,
+            "name": "Trailer",
+            "video_id": "HcZ0yaOLDI0"
+          },
+          {
+            "id": 4302,
+            "name": "Trailer",
+            "video_id": "JRh-0pyIoDQ"
+          },
+          {
+            "id": 7042,
+            "name": "Pre-order Trailer",
+            "video_id": "1Rz-9SDTk2I"
+          },
+          {
+            "id": 8343,
+            "name": "Trailer",
+            "video_id": "mJnQ8TLElyY"
+          },
+          {
+            "id": 4550,
+            "name": "E3 Trailer",
+            "video_id": "QvYR4GVXS7E"
+          },
+          {
+            "id": 120396,
+            "name": "Gameplay Video",
+            "video_id": "QiinO9JPUGw"
+          }
+        ],
+        "websites": [
+          {
+            "id": 730848,
+            "category": 17,
+            "url": "https://www.gog.com/game/doom_2016"
+          },
+          {
+            "id": 768284,
+            "url": "https://www.xbox.com/en-us/games/store/doom/C3QH42WRGM3R"
+          },
+          {
+            "id": 768285,
+            "url": "https://store.playstation.com/en-us/concept/201101"
+          },
+          {
+            "id": 61571,
+            "category": 4,
+            "url": "https://www.facebook.com/doom"
+          },
+          {
+            "id": 5601,
+            "category": 5,
+            "url": "https://twitter.com/DOOM"
+          },
+          {
+            "id": 43279,
+            "category": 13,
+            "url": "https://store.steampowered.com/app/379720"
+          },
+          {
+            "id": 51206,
+            "category": 3,
+            "url": "https://en.wikipedia.org/wiki/Doom_(2016_video_game)"
+          },
+          {
+            "id": 332473,
+            "category": 6,
+            "url": "https://www.twitch.tv/directory/game/Doom"
+          },
+          {
+            "id": 43278,
+            "category": 1,
+            "url": "http://www.doom.com"
+          },
+          {
+            "id": 61570,
+            "category": 2,
+            "url": "http://doom.wikia.com/wiki/Doom_(2016)"
+          },
+          {
+            "id": 61572,
+            "category": 8,
+            "url": "https://www.instagram.com/doom"
+          }
+        ],
+        "checksum": "f9180eee-c486-8953-ed7d-40076bed6e76",
+        "ports": [
+          76217
+        ],
+        "language_supports": [
+          {
+            "id": 35507,
+            "language": {
+              "id": 7,
+              "name": "English",
+              "native_name": "English (US)"
+            }
+          },
+          {
+            "id": 35508,
+            "language": {
+              "id": 7,
+              "name": "English",
+              "native_name": "English (US)"
+            }
+          },
+          {
+            "id": 35509,
+            "language": {
+              "id": 7,
+              "name": "English",
+              "native_name": "English (US)"
+            }
+          },
+          {
+            "id": 35510,
+            "language": {
+              "id": 12,
+              "name": "French",
+              "native_name": "Français"
+            }
+          },
+          {
+            "id": 35511,
+            "language": {
+              "id": 12,
+              "name": "French",
+              "native_name": "Français"
+            }
+          },
+          {
+            "id": 35512,
+            "language": {
+              "id": 12,
+              "name": "French",
+              "native_name": "Français"
+            }
+          },
+          {
+            "id": 35513,
+            "language": {
+              "id": 15,
+              "name": "Italian",
+              "native_name": "Italiano"
+            }
+          },
+          {
+            "id": 35514,
+            "language": {
+              "id": 15,
+              "name": "Italian",
+              "native_name": "Italiano"
+            }
+          },
+          {
+            "id": 35528,
+            "language": {
+              "id": 16,
+              "name": "Japanese",
+              "native_name": "日本語"
+            }
+          },
+          {
+            "id": 35529,
+            "language": {
+              "id": 19,
+              "name": "Polish",
+              "native_name": "Polski"
+            }
+          },
+          {
+            "id": 35530,
+            "language": {
+              "id": 19,
+              "name": "Polish",
+              "native_name": "Polski"
+            }
+          },
+          {
+            "id": 35531,
+            "language": {
+              "id": 19,
+              "name": "Polish",
+              "native_name": "Polski"
+            }
+          },
+          {
+            "id": 35532,
+            "language": {
+              "id": 21,
+              "name": "Portuguese (Brazil)",
+              "native_name": "Português (Brasil)"
+            }
+          },
+          {
+            "id": 35533,
+            "language": {
+              "id": 21,
+              "name": "Portuguese (Brazil)",
+              "native_name": "Português (Brasil)"
+            }
+          },
+          {
+            "id": 35534,
+            "language": {
+              "id": 21,
+              "name": "Portuguese (Brazil)",
+              "native_name": "Português (Brasil)"
+            }
+          },
+          {
+            "id": 35535,
+            "language": {
+              "id": 22,
+              "name": "Russian",
+              "native_name": "Русский"
+            }
+          },
+          {
+            "id": 35536,
+            "language": {
+              "id": 22,
+              "name": "Russian",
+              "native_name": "Русский"
+            }
+          },
+          {
+            "id": 35537,
+            "language": {
+              "id": 22,
+              "name": "Russian",
+              "native_name": "Русский"
+            }
+          },
+          {
+            "id": 35538,
+            "language": {
+              "id": 3,
+              "name": "Chinese (Traditional)",
+              "native_name": "繁體中文"
+            }
+          },
+          {
+            "id": 35539,
+            "language": {
+              "id": 3,
+              "name": "Chinese (Traditional)",
+              "native_name": "繁體中文"
+            }
+          },
+          {
+            "id": 35515,
+            "language": {
+              "id": 15,
+              "name": "Italian",
+              "native_name": "Italiano"
+            }
+          },
+          {
+            "id": 35516,
+            "language": {
+              "id": 27,
+              "name": "German",
+              "native_name": "Deutsch"
+            }
+          },
+          {
+            "id": 35518,
+            "language": {
+              "id": 27,
+              "name": "German",
+              "native_name": "Deutsch"
+            }
+          },
+          {
+            "id": 35520,
+            "language": {
+              "id": 27,
+              "name": "German",
+              "native_name": "Deutsch"
+            }
+          },
+          {
+            "id": 35522,
+            "language": {
+              "id": 9,
+              "name": "Spanish (Spain)",
+              "native_name": "Español (España)"
+            }
+          },
+          {
+            "id": 35523,
+            "language": {
+              "id": 9,
+              "name": "Spanish (Spain)",
+              "native_name": "Español (España)"
+            }
+          },
+          {
+            "id": 35524,
+            "language": {
+              "id": 9,
+              "name": "Spanish (Spain)",
+              "native_name": "Español (España)"
+            }
+          },
+          {
+            "id": 35525,
+            "language": {
+              "id": 16,
+              "name": "Japanese",
+              "native_name": "日本語"
+            }
+          },
+          {
+            "id": 35526,
+            "language": {
+              "id": 16,
+              "name": "Japanese",
+              "native_name": "日本語"
+            }
+          },
+          {
+            "id": 160165,
+            "language": {
+              "id": 10,
+              "name": "Spanish (Mexico)",
+              "native_name": "Español (Mexico)"
+            }
+          },
+          {
+            "id": 160168,
+            "language": {
+              "id": 10,
+              "name": "Spanish (Mexico)",
+              "native_name": "Español (Mexico)"
+            }
+          },
+          {
+            "id": 160171,
+            "language": {
+              "id": 10,
+              "name": "Spanish (Mexico)",
+              "native_name": "Español (Mexico)"
+            }
+          }
+        ],
+        "game_localizations": [
+          19505
+        ],
+        "collections": [
+          129
+        ],
+        "game_type": 0
+      }
+    ]
+  },
+  {
+    "name": "Game with time to beat",
+    "result": [
+      {
+        "id": 785,
+        "game_id": 7351,
+        "hastily": 28800,
+        "normally": 62929,
+        "completely": 129600,
+        "count": 13,
+        "created_at": 1728556553,
+        "updated_at": 1747307188,
+        "checksum": "32eb3794-a5b8-4e71-f21f-740111af723d"
+      }
+    ]
+  }
+]

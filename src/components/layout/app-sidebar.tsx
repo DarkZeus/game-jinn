@@ -3,24 +3,13 @@ import {
 	SidebarContent,
 	SidebarGroup,
 	SidebarGroupContent,
-	SidebarGroupLabel,
 	SidebarHeader,
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Link, useRouterState } from "@tanstack/react-router";
-import {
-	BarChart3,
-	Calendar,
-	FileText,
-	Gamepad2,
-	LayoutDashboard,
-	LineChart,
-	Settings,
-	Star,
-	Trophy,
-} from "lucide-react";
+import { Gamepad2, LayoutDashboard } from "lucide-react";
 
 const navItems = [
 	{ icon: LayoutDashboard, label: "Dashboard", href: "/" },
@@ -66,7 +55,7 @@ export function AppSidebar() {
 										asChild
 										isActive={currentPath === item.href}
 									>
-										<Link to={item.href}>
+										<Link to={item.href} viewTransition>
 											<item.icon />
 											<span>{item.label}</span>
 										</Link>

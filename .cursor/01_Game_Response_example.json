@@ -1,172 +1,2274 @@
 [
     {
-      "id": 302704,
+      "id": 52189,
       "age_ratings": [
-        205380,
-        205381,
-        205378,
-        205379,
-        196871,
-        205377,
-        196872
+        210410
       ],
-      "aggregated_rating": 86.5,
-      "aggregated_rating_count": 4,
       "alternative_names": [
-        153193
-      ],
-      "artworks": [
-        139353
+        {
+          "id": 9265,
+          "name": "GTA 6"
+        },
+        {
+          "id": 9263,
+          "name": "Grand Theft Auto 6"
+        },
+        {
+          "id": 139291,
+          "name": "GTA VI"
+        },
+        {
+          "id": 144677,
+          "name": "GTA6"
+        }
       ],
       "category": 0,
-      "cover": 434292,
-      "created_at": 1716735234,
+      "cover": {
+        "id": 456072,
+        "image_id": "co9rwo",
+        "url": "//images.igdb.com/igdb/image/upload/t_thumb/co9rwo.jpg"
+      },
+      "created_at": 1501144586,
       "external_games": [
-        2922319,
-        2922355,
-        3023863,
-        2978038
+        100649
       ],
-      "first_release_date": 1747267200,
+      "first_release_date": 1779753600,
       "franchises": [
-        798
+        {
+          "id": 493,
+          "created_at": 1416175755,
+          "games": [
+            732,
+            27912,
+            733,
+            43853,
+            980,
+            1020,
+            3266,
+            3263,
+            3262,
+            8235,
+            3270,
+            819,
+            731,
+            44870,
+            730,
+            5850,
+            3174,
+            3265,
+            98077,
+            119155,
+            99753,
+            45131,
+            22930,
+            62701,
+            134709,
+            52189,
+            251244,
+            194698,
+            13233,
+            43687,
+            7003,
+            178125,
+            178126,
+            53070,
+            178123,
+            134710,
+            198246,
+            143293,
+            334254,
+            263913,
+            327467,
+            93901,
+            143295,
+            200401,
+            200403,
+            239060,
+            309110,
+            334647,
+            41587,
+            239064
+          ],
+          "name": "Grand Theft Auto",
+          "slug": "grand-theft-auto",
+          "updated_at": 1743273361,
+          "url": "https://www.igdb.com/franchises/grand-theft-auto",
+          "checksum": "d9729795-78d5-c046-0fe7-d7fa0b1e980f"
+        }
       ],
       "game_engines": [
-        1785
+        {
+          "id": 26,
+          "companies": [
+            364
+          ],
+          "created_at": 1402868699,
+          "description": "Rockstar Advanced Game Engine or RAGE in short, is a game engine developed by the RAGE Technology Group at Rockstar San Diego. RAGE initially evolved from the Angel Game Engine, which was Rockstar San Diego's previous game engine from before they got bought by Rockstar Games.",
+          "logo": 16,
+          "name": "RAGE",
+          "platforms": [
+            14,
+            6,
+            9,
+            48,
+            170,
+            49,
+            5,
+            12
+          ],
+          "slug": "rage",
+          "updated_at": 1747338343,
+          "url": "https://www.igdb.com/game_engines/rage",
+          "checksum": "77e430ca-abe8-c0d7-61f9-cfce8d953650"
+        }
       ],
       "game_modes": [
-        1
+        {
+          "id": 1,
+          "created_at": 1298968834,
+          "name": "Single player",
+          "slug": "single-player",
+          "updated_at": 1323289216,
+          "url": "https://www.igdb.com/game_modes/single-player",
+          "checksum": "1cc07088-c5fb-3cb2-9e68-af6620c18836"
+        },
+        {
+          "id": 2,
+          "created_at": 1298968853,
+          "name": "Multiplayer",
+          "slug": "multiplayer",
+          "updated_at": 1323289216,
+          "url": "https://www.igdb.com/game_modes/multiplayer",
+          "checksum": "3ffef62b-e19f-6bab-d510-98385c06d902"
+        },
+        {
+          "id": 3,
+          "created_at": 1298968887,
+          "name": "Co-operative",
+          "slug": "co-operative",
+          "updated_at": 1323289216,
+          "url": "https://www.igdb.com/game_modes/co-operative",
+          "checksum": "d154173b-5bdf-5fda-5969-e4c87e135d1a"
+        }
       ],
       "genres": [
-        5
+        {
+          "id": 5,
+          "created_at": 1297639288,
+          "name": "Shooter",
+          "slug": "shooter",
+          "updated_at": 1323289215,
+          "url": "https://www.igdb.com/genres/shooter",
+          "checksum": "20c255bc-ec2d-c219-34bd-47995b0a79f1"
+        },
+        {
+          "id": 10,
+          "created_at": 1297639288,
+          "name": "Racing",
+          "slug": "racing",
+          "updated_at": 1323289215,
+          "url": "https://www.igdb.com/genres/racing",
+          "checksum": "41227287-0a1a-0f14-90f2-05655314e8b4"
+        },
+        {
+          "id": 31,
+          "created_at": 1323568041,
+          "name": "Adventure",
+          "slug": "adventure",
+          "updated_at": 1323568041,
+          "url": "https://www.igdb.com/genres/adventure",
+          "checksum": "a93a77df-3927-13fa-1d50-5d443cbb695f"
+        }
       ],
-      "hypes": 197,
+      "hypes": 488,
       "involved_companies": [
-        269683,
-        269684
+        {
+          "id": 98111,
+          "company": {
+            "id": 29,
+            "name": "Rockstar Games"
+          },
+          "created_at": 1588464000,
+          "developer": true,
+          "game": 52189,
+          "porting": false,
+          "publisher": true,
+          "supporting": false,
+          "updated_at": 1588464000,
+          "checksum": "336231e2-13fb-f2b0-adb5-fd600c931aad"
+        },
+        {
+          "id": 256038,
+          "company": {
+            "id": 139,
+            "name": "Take-Two Interactive"
+          },
+          "created_at": 1709336023,
+          "developer": false,
+          "game": 52189,
+          "porting": false,
+          "publisher": true,
+          "supporting": false,
+          "updated_at": 1709542210,
+          "checksum": "2be89565-dfae-5248-2ad1-68f8eb565fd3"
+        }
       ],
       "keywords": [
-        129,
-        472,
-        1069,
-        1308
+        {
+          "id": 25,
+          "created_at": 1319990335,
+          "name": "vehicular combat",
+          "slug": "vehicular-combat",
+          "updated_at": 1323289214,
+          "url": "https://www.igdb.com/categories/vehicular-combat",
+          "checksum": "c4552198-9e0a-7d27-5c53-5c9ae51daaa7"
+        },
+        {
+          "id": 129,
+          "created_at": 1363942582,
+          "name": "bloody",
+          "slug": "bloody",
+          "updated_at": 1685424190,
+          "url": "https://www.igdb.com/categories/bloody",
+          "checksum": "cd6a74ca-7075-bf8e-efd4-63240193bc75"
+        },
+        {
+          "id": 221,
+          "created_at": 1372316517,
+          "name": "murder",
+          "slug": "murder",
+          "updated_at": 1372316517,
+          "url": "https://www.igdb.com/categories/murder",
+          "checksum": "67a01ede-1f09-b9bb-6bfc-8854552ce3d9"
+        },
+        {
+          "id": 1669,
+          "created_at": 1438096137,
+          "name": "crime",
+          "slug": "crime",
+          "updated_at": 1438096137,
+          "url": "https://www.igdb.com/categories/crime",
+          "checksum": "0530d350-70e1-8c5c-7294-56132589e7e1"
+        },
+        {
+          "id": 2424,
+          "created_at": 1464724482,
+          "name": "realistic",
+          "slug": "realistic",
+          "updated_at": 1464724482,
+          "url": "https://www.igdb.com/categories/realistic",
+          "checksum": "d08a3f5a-c83a-569f-311b-bf2e33126af9"
+        },
+        {
+          "id": 4353,
+          "created_at": 1507133920,
+          "name": "human",
+          "slug": "human",
+          "updated_at": 1507133920,
+          "url": "https://www.igdb.com/categories/human",
+          "checksum": "455c2d40-34e4-3f38-4c9e-d4a5fe82593d"
+        }
       ],
-      "name": "Doom: The Dark Ages",
+      "name": "Grand Theft Auto VI",
       "platforms": [
-        169,
-        6,
-        167
+        {
+          "id": 169,
+          "name": "Xbox Series X|S"
+        },
+        {
+          "id": 167,
+          "name": "PlayStation 5"
+        }
       ],
       "player_perspectives": [
-        1
+        {
+          "id": 1,
+          "created_at": 1298968658,
+          "name": "First person",
+          "slug": "first-person",
+          "updated_at": 1323289214,
+          "url": "https://www.igdb.com/player_perspectives/first-person",
+          "checksum": "d90c79c9-6e5d-b0c9-49fd-3866866b8c9f"
+        },
+        {
+          "id": 2,
+          "created_at": 1298968673,
+          "name": "Third person",
+          "slug": "third-person",
+          "updated_at": 1323289214,
+          "url": "https://www.igdb.com/player_perspectives/third-person",
+          "checksum": "df3218c6-d152-af20-f352-b04f70f43ae5"
+        }
       ],
-      "rating": 89.63021773782754,
-      "rating_count": 6,
       "release_dates": [
-        694060,
-        694057,
-        694058,
-        694059
+        736524,
+        736525
       ],
       "screenshots": [
-        1338046,
-        1338030,
-        1338032,
-        1338033,
-        1338031,
-        1338047
+        {
+          "id": 1526347,
+          "image_id": "scwpqj",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scwpqj.jpg"
+        },
+        {
+          "id": 1526346,
+          "image_id": "scwpqi",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scwpqi.jpg"
+        },
+        {
+          "id": 1203595,
+          "image_id": "scpsp7",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scpsp7.jpg"
+        },
+        {
+          "id": 1203594,
+          "image_id": "scpsp6",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scpsp6.jpg"
+        },
+        {
+          "id": 1203596,
+          "image_id": "scpsp8",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scpsp8.jpg"
+        },
+        {
+          "id": 1203597,
+          "image_id": "scpsp9",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/scpsp9.jpg"
+        },
+        {
+          "id": 1365871,
+          "image_id": "sct9wv",
+          "url": "//images.igdb.com/igdb/image/upload/t_thumb/sct9wv.jpg"
+        }
       ],
       "similar_games": [
-        103298,
-        55038,
-        19164,
-        105269,
-        68286,
-        107318,
-        103301,
-        57187,
-        28070,
-        47823
+        {
+          "id": 105011,
+          "artworks": [
+            104788
+          ],
+          "category": 0,
+          "cover": 152679,
+          "created_at": 1531146648,
+          "external_games": [
+            1948027,
+            1219257
+          ],
+          "first_release_date": 1532649600,
+          "game_engines": [
+            13
+          ],
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            10,
+            13,
+            31,
+            32
+          ],
+          "hypes": 4,
+          "involved_companies": [
+            71846
+          ],
+          "keywords": [
+            43
+          ],
+          "name": "Dude Simulator 2",
+          "platforms": [
+            6
+          ],
+          "player_perspectives": [
+            1
+          ],
+          "rating": 40,
+          "rating_count": 3,
+          "release_dates": [
+            406619
+          ],
+          "screenshots": [
+            236066,
+            236070,
+            236069,
+            236064,
+            236067,
+            236065,
+            236068
+          ],
+          "similar_games": [
+            37419,
+            26574,
+            115785,
+            17548,
+            113360,
+            25311,
+            35994,
+            10776,
+            9243,
+            111130
+          ],
+          "slug": "dude-simulator-2",
+          "summary": "Dude Simulator 2 is an open world sandbox game. This is a life simulator. The main objective is to enjoy what you are doing.",
+          "tags": [
+            1,
+            27,
+            33,
+            38,
+            268435466,
+            268435469,
+            268435487,
+            268435488,
+            536870955
+          ],
+          "themes": [
+            1,
+            27,
+            33,
+            38
+          ],
+          "total_rating": 40,
+          "total_rating_count": 3,
+          "updated_at": 1746113447,
+          "url": "https://www.igdb.com/games/dude-simulator-2",
+          "websites": [
+            405620,
+            85551
+          ],
+          "checksum": "86a68e52-7156-a789-6604-2696bdaa36d0",
+          "language_supports": [
+            50560,
+            50561,
+            50562,
+            986269,
+            986270,
+            986271,
+            986272,
+            986273,
+            986274,
+            986275,
+            986276,
+            986277
+          ],
+          "collections": [
+            6800
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 19164,
+          "age_ratings": [
+            111701,
+            96621,
+            111702,
+            96618,
+            94109,
+            96620,
+            190564
+          ],
+          "aggregated_rating": 81,
+          "aggregated_rating_count": 14,
+          "alternative_names": [
+            30665
+          ],
+          "artworks": [
+            6932,
+            6933,
+            6931
+          ],
+          "bundles": [
+            264479
+          ],
+          "category": 0,
+          "cover": 94287,
+          "created_at": 1463153212,
+          "dlcs": [
+            259759,
+            271818,
+            293719,
+            126181
+          ],
+          "expansions": [
+            134100,
+            138354,
+            126138,
+            131784
+          ],
+          "external_games": [
+            1935853,
+            1937227,
+            1937378,
+            1938060,
+            1930213,
+            1934105,
+            1865708,
+            1865916,
+            1865810,
+            1865414,
+            1865492,
+            108729,
+            1928473,
+            1929127,
+            2082522,
+            1865626,
+            1865587,
+            1712888,
+            1924218,
+            1865482,
+            1859301,
+            2627300,
+            2604098,
+            2586492,
+            2086854,
+            1929418,
+            2086399,
+            2085839,
+            2087246,
+            2439161,
+            2118323,
+            2586791,
+            2591140,
+            2175898
+          ],
+          "first_release_date": 1568332800,
+          "franchises": [
+            808
+          ],
+          "game_engines": [
+            439
+          ],
+          "game_modes": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "genres": [
+            5,
+            12
+          ],
+          "hypes": 53,
+          "involved_companies": [
+            179563,
+            179564
+          ],
+          "multiplayer_modes": [
+            25430
+          ],
+          "name": "Borderlands 3",
+          "platforms": [
+            170,
+            169,
+            48,
+            6,
+            167,
+            14,
+            49
+          ],
+          "player_perspectives": [
+            1,
+            2
+          ],
+          "rating": 76.683888884179,
+          "rating_count": 450,
+          "release_dates": [
+            374316,
+            327756,
+            167478,
+            167480,
+            185026,
+            214074,
+            167479
+          ],
+          "screenshots": [
+            296740,
+            296741,
+            307614,
+            307615,
+            307619,
+            307620,
+            307617,
+            307616,
+            307618,
+            334475,
+            334473,
+            334474,
+            1379896
+          ],
+          "similar_games": [
+            81249,
+            103303,
+            55038,
+            96217,
+            54775,
+            106987,
+            47823,
+            113636,
+            115653,
+            17548
+          ],
+          "slug": "borderlands-3",
+          "summary": "The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters. Play solo or with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.",
+          "tags": [
+            1,
+            17,
+            27,
+            38,
+            268435461,
+            268435468
+          ],
+          "themes": [
+            1,
+            17,
+            27,
+            38
+          ],
+          "total_rating": 78.8419444420895,
+          "total_rating_count": 464,
+          "updated_at": 1747569108,
+          "url": "https://www.igdb.com/games/borderlands-3",
+          "videos": [
+            25887,
+            26947,
+            121255,
+            140991
+          ],
+          "websites": [
+            786775,
+            786776,
+            104052,
+            104051,
+            104054,
+            136706,
+            104033,
+            104053,
+            103794,
+            120072,
+            221721,
+            288304,
+            398316,
+            104032
+          ],
+          "checksum": "8b8a26bc-a04d-5934-acad-a81f3d67004f",
+          "language_supports": [
+            41670,
+            41671,
+            41672,
+            41673,
+            41674,
+            41675,
+            41676,
+            41679,
+            41681,
+            41684,
+            41677,
+            41680,
+            41682,
+            41683,
+            41678,
+            41685,
+            41686,
+            41687,
+            41688,
+            41689,
+            41690,
+            41691,
+            41692,
+            41693,
+            41694,
+            41695,
+            41696,
+            41697,
+            41698,
+            41699
+          ],
+          "game_localizations": [
+            19715,
+            5551
+          ],
+          "collections": [
+            225
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 1877,
+          "age_ratings": [
+            56885,
+            44435,
+            124694,
+            67324,
+            50715,
+            93481,
+            190586
+          ],
+          "aggregated_rating": 75.23809523809524,
+          "aggregated_rating_count": 21,
+          "alternative_names": [
+            71590,
+            71591,
+            71593,
+            53534
+          ],
+          "artworks": [
+            4940,
+            5673,
+            5674,
+            8743,
+            5036,
+            5035,
+            5038,
+            5034,
+            4942,
+            4941,
+            5037,
+            8066
+          ],
+          "bundles": [
+            277807
+          ],
+          "category": 0,
+          "cover": 332107,
+          "created_at": 1358030686,
+          "expansions": [
+            215769
+          ],
+          "external_games": [
+            1935828,
+            1936985,
+            1937283,
+            1928399,
+            1934268,
+            1683388,
+            79305,
+            1594225,
+            39440,
+            122112,
+            247945,
+            189454,
+            1934063,
+            2626722,
+            1936438,
+            1928338,
+            1928405,
+            1932820,
+            1933429,
+            1934523,
+            1936425,
+            1936837,
+            1936549,
+            1942981,
+            2515136,
+            2082423,
+            2167641,
+            1937356,
+            2085218,
+            2118409,
+            1934082,
+            1936888,
+            2088958,
+            1928783,
+            2085117,
+            2087025,
+            1937050,
+            2085274,
+            1933912,
+            1937073,
+            1726346,
+            2587560,
+            2586575,
+            1936138,
+            1936238,
+            1934165,
+            1937644,
+            1943939,
+            1941503,
+            2589609,
+            2586837,
+            2175515,
+            2068956,
+            2070653
+          ],
+          "first_release_date": 1607558400,
+          "franchises": [
+            451
+          ],
+          "game_engines": [
+            24
+          ],
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            5,
+            12,
+            31
+          ],
+          "hypes": 1038,
+          "involved_companies": [
+            93176,
+            113775,
+            113776,
+            228841,
+            228842
+          ],
+          "keywords": [
+            103,
+            106,
+            1961,
+            4142,
+            4650,
+            5389,
+            7097
+          ],
+          "name": "Cyberpunk 2077",
+          "platforms": [
+            170,
+            169,
+            48,
+            6,
+            167,
+            14,
+            49
+          ],
+          "player_perspectives": [
+            1,
+            2
+          ],
+          "rating": 81.86652310492482,
+          "rating_count": 1148,
+          "release_dates": [
+            344301,
+            344300,
+            215923,
+            215922,
+            215920,
+            215921,
+            659463
+          ],
+          "screenshots": [
+            214071,
+            214066,
+            214069,
+            214070,
+            214067,
+            214060,
+            214061,
+            214062,
+            214063,
+            214064,
+            214068,
+            1371280,
+            1371281,
+            1371282,
+            1371283
+          ],
+          "similar_games": [
+            55038,
+            105269,
+            19164,
+            26574,
+            107318,
+            47823,
+            100413,
+            113114,
+            90099,
+            17548
+          ],
+          "slug": "cyberpunk-2077",
+          "storyline": "In 2077, following an economic collapse sometime during the early 21st century, the United States is forced to rely on large corporations to survive. These corporations deal in a wide range of areas, such as weapons, robotics, cybernetics, pharmaceuticals, communications and biotechnology, and many of these companies operate above the law. The world in between is where decadence, sex and pop culture mix with violent crime, extreme poverty and the unattainable promise of the American Dream. You play as V, a mercenary outlaw deeply embedded in the crime-ridden city of Night City, going after a one-of-a-kind implant that is the key to immortality.",
+          "summary": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.",
+          "tags": [
+            1,
+            18,
+            33,
+            38,
+            268435461,
+            268435468,
+            268435487,
+            536871015,
+            536871018,
+            536872873,
+            536875054,
+            536875562,
+            536876301,
+            536878009
+          ],
+          "themes": [
+            1,
+            18,
+            33,
+            38
+          ],
+          "total_rating": 78.55230917151003,
+          "total_rating_count": 1169,
+          "updated_at": 1747500147,
+          "url": "https://www.igdb.com/games/cyberpunk-2077",
+          "videos": [
+            36458,
+            64371,
+            64372,
+            64373,
+            64374,
+            64375,
+            64376,
+            64377,
+            64378,
+            64379,
+            64380,
+            64381,
+            64382,
+            64383,
+            64384,
+            64385,
+            87236,
+            98380,
+            98381,
+            140970
+          ],
+          "websites": [
+            778979,
+            778978,
+            746321,
+            746315,
+            746316,
+            746317,
+            746318,
+            746319,
+            120139,
+            57810,
+            117115,
+            120138,
+            205294,
+            120137,
+            522490
+          ],
+          "checksum": "8755d103-7107-f71b-9672-de190cf628b8",
+          "language_supports": [
+            165511,
+            165512,
+            157397,
+            157398,
+            157400,
+            157399,
+            157402,
+            157401,
+            157403,
+            157405,
+            157404,
+            157406,
+            157407,
+            157409,
+            157408,
+            157411,
+            157418,
+            157425,
+            157432,
+            157438,
+            157444,
+            157410,
+            157413,
+            157415,
+            157416,
+            157419,
+            157422,
+            157423,
+            157428,
+            157431,
+            157434,
+            157439,
+            157442,
+            157412,
+            157414,
+            157417,
+            157420,
+            157421,
+            157424,
+            157426,
+            157427,
+            157430,
+            157429,
+            157433,
+            157436,
+            157435,
+            157440,
+            157441,
+            157443,
+            157437,
+            804143
+          ],
+          "game_localizations": [
+            176,
+            3387
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 115785,
+          "age_ratings": [
+            94590,
+            127276,
+            127275,
+            127277,
+            127274,
+            25607,
+            96197
+          ],
+          "aggregated_rating": 72.5,
+          "aggregated_rating_count": 2,
+          "alternative_names": [
+            102249,
+            106240
+          ],
+          "artworks": [
+            7355
+          ],
+          "category": 0,
+          "cover": 82136,
+          "created_at": 1551885639,
+          "external_games": [
+            2061990,
+            1724714,
+            1722428,
+            1722769,
+            1774534,
+            2061926,
+            2638618,
+            2086299,
+            2079027,
+            2581552,
+            2605198,
+            2717152,
+            2220748,
+            2609233,
+            2071995,
+            2078924,
+            2128180,
+            2160798,
+            2636663,
+            2135218,
+            2754180,
+            2905064,
+            2082856,
+            2583973,
+            2636960,
+            1712173,
+            2587812,
+            2174696
+          ],
+          "first_release_date": 1558396800,
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            5,
+            10,
+            31,
+            32
+          ],
+          "hypes": 1,
+          "involved_companies": [
+            131445,
+            131447
+          ],
+          "name": "American Fugitive",
+          "platforms": [
+            48,
+            6,
+            49,
+            130
+          ],
+          "rating": 67.77984819610481,
+          "rating_count": 17,
+          "release_dates": [
+            338134,
+            168884,
+            168885,
+            168852,
+            168883
+          ],
+          "screenshots": [
+            292511,
+            292504,
+            292505,
+            292503,
+            292506,
+            292507,
+            292509,
+            292508,
+            292510,
+            292512
+          ],
+          "similar_games": [
+            105011,
+            37419,
+            26574,
+            47823,
+            113360,
+            105269,
+            17548,
+            107318,
+            111130,
+            10776
+          ],
+          "slug": "american-fugitive",
+          "summary": "Set in a sleepy American country town in the 1980s, American Fugitive invites you to play as Will Riley. You're no angel, but you're not a killer. Yet the cold-blooded murder of your dad is the crime they've locked you up for. Fuelled by grief and a burning desire for vengeance, you must break out of jail to find the real culprit. It's payback time.",
+          "tags": [
+            1,
+            33,
+            38,
+            268435461,
+            268435466,
+            268435487,
+            268435488
+          ],
+          "themes": [
+            1,
+            33,
+            38
+          ],
+          "total_rating": 70.1399240980524,
+          "total_rating_count": 19,
+          "updated_at": 1747541813,
+          "url": "https://www.igdb.com/games/american-fugitive",
+          "videos": [
+            27479,
+            25365,
+            26862
+          ],
+          "websites": [
+            771174,
+            771175,
+            105832,
+            105834,
+            353010,
+            516922,
+            102114,
+            105833
+          ],
+          "checksum": "4dad001f-1879-375f-eb16-25b18214edda",
+          "language_supports": [
+            88480,
+            88461,
+            88462,
+            88463,
+            88464,
+            88465,
+            88466,
+            88467,
+            88468,
+            88469,
+            88470,
+            88471,
+            88472,
+            88473,
+            88474,
+            88475,
+            88476,
+            88477,
+            88478,
+            88479,
+            503016
+          ],
+          "game_localizations": [
+            11679,
+            20850
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 19561,
+          "age_ratings": [
+            68763,
+            162885,
+            103233,
+            162884,
+            157670,
+            56134,
+            191069
+          ],
+          "aggregated_rating": 74.6875,
+          "aggregated_rating_count": 16,
+          "alternative_names": [
+            9348
+          ],
+          "artworks": [
+            25125
+          ],
+          "category": 0,
+          "cover": 425507,
+          "created_at": 1465867295,
+          "dlcs": [
+            331216
+          ],
+          "external_games": [
+            1935519,
+            1865629,
+            1930300,
+            1935247,
+            1865614,
+            1932739,
+            79354,
+            55474,
+            1865393,
+            190020,
+            1865786,
+            252089,
+            1865428,
+            1593688,
+            2086970,
+            2086462,
+            2856698,
+            107076,
+            1928358,
+            2085167,
+            1865687,
+            1865498,
+            1936127,
+            1937163,
+            2058652,
+            2118517,
+            2088267,
+            2439431,
+            2220594,
+            2586825,
+            2585052,
+            2175516,
+            2625741,
+            2011740
+          ],
+          "first_release_date": 1556236800,
+          "game_engines": [
+            439
+          ],
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            5,
+            31
+          ],
+          "hypes": 131,
+          "involved_companies": [
+            36443,
+            124383
+          ],
+          "keywords": [
+            5,
+            57,
+            69,
+            129,
+            1033,
+            2452,
+            4224,
+            4883
+          ],
+          "name": "Days Gone",
+          "platforms": [
+            48,
+            6
+          ],
+          "player_perspectives": [
+            2
+          ],
+          "rating": 79.60893332624723,
+          "rating_count": 473,
+          "release_dates": [
+            251728,
+            160154,
+            238576
+          ],
+          "screenshots": [
+            212324,
+            44403,
+            44406,
+            44404,
+            44405,
+            44402,
+            213661,
+            212323,
+            212329,
+            212328,
+            212326,
+            212327
+          ],
+          "similar_games": [
+            17379,
+            44076,
+            102584,
+            19541,
+            37016,
+            10776,
+            13210,
+            26574,
+            19564,
+            105049
+          ],
+          "slug": "days-gone",
+          "storyline": "Deacon St. John, a former outlaw and drifter, searches for purpose in a world ravaged by a pandemic that has turned much of humanity into mindless, violent creatures called Freakers. Driven by the hope that his wife, Sarah, may still be alive, he navigates the dangers of the Pacific Northwest, facing hostile factions, freakish threats, and his own haunting memories. As he fights for survival, Deacon forms new alliances, confronts his past, and seeks answers about his wife’s fate, uncovering harsh truths about resilience and loss in a world on the edge.",
+          "summary": "Days Gone is an open-world action-adventure game developed by Bend Studio and published by Sony Interactive Entertainment. Released in April 2019 for PlayStation 4 and later for PC in May 2021, the game is set in a post-apocalyptic world where players control Deacon St. John, a drifter and bounty hunter navigating a landscape overrun by \"Freakers,\" zombie-like creatures created by a global pandemic.\n\nThe gameplay focuses on exploration, combat, and survival elements, with players able to use various weapons, craft supplies, and upgrade Deacon’s motorcycle, essential for travelling across the vast and hostile environment. Days Gone combines narrative-driven missions with an open world filled with dynamic events, enemy camps, and environmental challenges.",
+          "tags": [
+            1,
+            19,
+            21,
+            33,
+            38,
+            268435461,
+            268435487,
+            536870917,
+            536870969,
+            536870981,
+            536871041,
+            536871945,
+            536873364,
+            536875136,
+            536875795
+          ],
+          "themes": [
+            1,
+            19,
+            21,
+            33,
+            38
+          ],
+          "total_rating": 77.1482166631236,
+          "total_rating_count": 489,
+          "updated_at": 1747576261,
+          "url": "https://www.igdb.com/games/days-gone",
+          "videos": [
+            22292,
+            22295,
+            22296,
+            25793,
+            22294,
+            25602,
+            24240,
+            22293,
+            120750
+          ],
+          "websites": [
+            786334,
+            79029,
+            79030,
+            59852,
+            79031,
+            171395,
+            171396,
+            254705,
+            339127,
+            592332,
+            607831,
+            52218,
+            79028
+          ],
+          "checksum": "eb5c63cf-ad88-7b73-4694-b6069df6784c",
+          "remasters": [
+            331206
+          ],
+          "language_supports": [
+            233807,
+            233808,
+            233809,
+            233810,
+            233818,
+            233831,
+            233835,
+            233868,
+            233880,
+            233882,
+            233879,
+            233881,
+            233883,
+            233812,
+            233824,
+            233845,
+            233855,
+            233867,
+            233874,
+            233814,
+            233822,
+            233828,
+            233816,
+            233826,
+            233839,
+            233849,
+            233861,
+            233876,
+            233843,
+            233872,
+            233878,
+            233886,
+            233820,
+            233833,
+            233847,
+            233857,
+            233869,
+            233837,
+            233851,
+            233863,
+            233873,
+            233877,
+            233884,
+            233841,
+            233853,
+            233865,
+            233870,
+            233875,
+            233885,
+            233859,
+            233871,
+            650414,
+            650415
+          ],
+          "game_localizations": [
+            26115
+          ],
+          "collections": [
+            5896
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 26574,
+          "category": 0,
+          "cover": 82161,
+          "created_at": 1482387198,
+          "external_games": [
+            104569,
+            281408,
+            1599
+          ],
+          "first_release_date": 1481587200,
+          "game_modes": [
+            1,
+            2,
+            3
+          ],
+          "genres": [
+            12,
+            13,
+            15,
+            31,
+            32
+          ],
+          "involved_companies": [
+            43108
+          ],
+          "name": "Force of Nature",
+          "platforms": [
+            6
+          ],
+          "player_perspectives": [
+            2
+          ],
+          "rating": 69.82869719043529,
+          "rating_count": 12,
+          "release_dates": [
+            63132
+          ],
+          "screenshots": [
+            70449,
+            70452,
+            70450,
+            70451,
+            70453
+          ],
+          "similar_games": [
+            109339,
+            25311,
+            35994,
+            17548,
+            37419,
+            10776,
+            17379,
+            26145,
+            113360,
+            9243
+          ],
+          "slug": "force-of-nature",
+          "summary": "Force of Nature is an indie open world sandbox game with fighting, crafting, building and farming systems.",
+          "tags": [
+            1,
+            21,
+            33,
+            38,
+            268435468,
+            268435469,
+            268435471,
+            268435487,
+            268435488
+          ],
+          "themes": [
+            1,
+            21,
+            33,
+            38
+          ],
+          "total_rating": 69.82869719043529,
+          "total_rating_count": 12,
+          "updated_at": 1744813341,
+          "url": "https://www.igdb.com/games/force-of-nature",
+          "videos": [
+            11427
+          ],
+          "websites": [
+            48380,
+            69963,
+            341684
+          ],
+          "checksum": "7e1efdea-2761-cedc-d1c7-beaa5686547d",
+          "language_supports": [
+            191815,
+            191818,
+            191822,
+            191829,
+            191832,
+            191836,
+            191807,
+            191808,
+            191809,
+            191810,
+            191811,
+            191812,
+            191840,
+            191841,
+            191842,
+            191843,
+            191813,
+            191817,
+            191827,
+            191830,
+            191837,
+            191814,
+            191820,
+            191826,
+            191833,
+            191835,
+            191838,
+            191816,
+            191819,
+            191824,
+            191828,
+            191831,
+            191834,
+            191839,
+            191796,
+            191797,
+            191798,
+            191800,
+            191801,
+            191799,
+            191802,
+            191805,
+            191803,
+            191804,
+            191806
+          ],
+          "collections": [
+            7049
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 47823,
+          "age_ratings": [
+            25541,
+            113218,
+            113219,
+            113220
+          ],
+          "aggregated_rating": 50,
+          "aggregated_rating_count": 1,
+          "alternative_names": [
+            106517,
+            106454
+          ],
+          "artworks": [
+            7777,
+            8175
+          ],
+          "category": 0,
+          "cover": 76951,
+          "created_at": 1499882859,
+          "external_games": [
+            1935740,
+            1593949,
+            253611,
+            101695,
+            2089328,
+            2712935,
+            2125220,
+            2439295,
+            2087772,
+            2117238,
+            2580992,
+            2175709,
+            72060
+          ],
+          "first_release_date": 1572566400,
+          "game_engines": [
+            6
+          ],
+          "game_modes": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "genres": [
+            5,
+            12,
+            31,
+            32
+          ],
+          "hypes": 1,
+          "involved_companies": [
+            52009,
+            52010
+          ],
+          "keywords": [
+            1033
+          ],
+          "name": "Citadel: Forged With Fire",
+          "platforms": [
+            48,
+            6,
+            49
+          ],
+          "player_perspectives": [
+            1
+          ],
+          "rating": 59.56217516454484,
+          "rating_count": 6,
+          "release_dates": [
+            176695,
+            176694,
+            182319
+          ],
+          "screenshots": [
+            110429,
+            110431,
+            110433,
+            110432,
+            110430,
+            308261
+          ],
+          "similar_games": [
+            113360,
+            96217,
+            106987,
+            28309,
+            36198,
+            80916,
+            55038,
+            105269,
+            30245,
+            17548
+          ],
+          "slug": "citadel-forged-with-fire",
+          "storyline": "As a newly minted apprentice of the magic arts, you will set off to investigate the dangerous world of Ignus. Your goal: create a name for yourself and achieve notoriety and power among the land's ruling Houses.",
+          "summary": "Citadel: Forged With Fire is a massive online sandbox RPG with elements of magic, spellcasting and inner-kingdom conflict. You have complete freedom to pursue your own destiny; hatch plots of trickery and deceit to ascend the ranks among allies and enemies, become an infamous hunter of other players, build massive and unique castles, tame mighty beasts to do your bidding, and visit uncharted territories to unravel their rich and intriguing history. The path to ultimate power and influence is yours to choose.",
+          "tags": [
+            1,
+            17,
+            33,
+            268435461,
+            268435468,
+            268435487,
+            268435488,
+            536871945
+          ],
+          "themes": [
+            1,
+            17,
+            33
+          ],
+          "total_rating": 54.78108758227242,
+          "total_rating_count": 7,
+          "updated_at": 1747361038,
+          "url": "https://www.igdb.com/games/citadel-forged-with-fire",
+          "videos": [
+            14878,
+            30186,
+            29754
+          ],
+          "websites": [
+            51778,
+            51779,
+            512905,
+            774322,
+            51776,
+            51777,
+            66002
+          ],
+          "checksum": "cc809ec0-95e2-c861-9cc3-e8ae61597004",
+          "language_supports": [
+            38674,
+            38685,
+            38678,
+            38684,
+            38675,
+            38677,
+            38682,
+            38676,
+            38681,
+            38683,
+            38688,
+            38679,
+            38698,
+            38680,
+            38690,
+            38692,
+            38686,
+            38687,
+            38689,
+            38694,
+            38700,
+            38696
+          ],
+          "game_localizations": [
+            7960
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 17548,
+          "artworks": [
+            32448
+          ],
+          "category": 0,
+          "cover": 82231,
+          "created_at": 1455281439,
+          "external_games": [
+            281476,
+            112062,
+            2519805,
+            10808
+          ],
+          "first_release_date": 1423008000,
+          "game_engines": [
+            13
+          ],
+          "game_modes": [
+            1,
+            2,
+            3
+          ],
+          "genres": [
+            12,
+            31,
+            32
+          ],
+          "involved_companies": [
+            32353,
+            32354
+          ],
+          "multiplayer_modes": [
+            13454
+          ],
+          "name": "Savage Lands",
+          "platforms": [
+            3,
+            6,
+            14
+          ],
+          "player_perspectives": [
+            1
+          ],
+          "rating": 59.23857143860094,
+          "rating_count": 10,
+          "release_dates": [
+            177638,
+            177637,
+            177636
+          ],
+          "screenshots": [
+            94194,
+            94196,
+            94198,
+            94195,
+            94197
+          ],
+          "similar_games": [
+            26574,
+            113360,
+            96217,
+            106987,
+            10776,
+            80916,
+            47823,
+            81249,
+            103303,
+            9243
+          ],
+          "slug": "savage-lands",
+          "status": 4,
+          "summary": "A New Land, A New Life: Savage Lands is a gritty, brutal, first-person open-world fantasy survival experience in which players have only one goal: Stay Alive. Explore a world where days and nights are spent slaughtering vicious creatures, gathering scarce resources, building shelter and crafting powerful weapons needed to survive. Every decision counts, because one mistake can lead to an unfortunate encounter with death's cold embrace.",
+          "tags": [
+            1,
+            17,
+            21,
+            33,
+            38,
+            43,
+            268435468,
+            268435487,
+            268435488
+          ],
+          "themes": [
+            1,
+            17,
+            21,
+            33,
+            38,
+            43
+          ],
+          "total_rating": 59.23857143860094,
+          "total_rating_count": 10,
+          "updated_at": 1747536782,
+          "url": "https://www.igdb.com/games/savage-lands",
+          "videos": [
+            53494
+          ],
+          "websites": [
+            24841,
+            66433,
+            111486,
+            111487,
+            341738
+          ],
+          "checksum": "bdf3c7f2-4681-ffc3-8e8c-450f8beb7cee",
+          "language_supports": [
+            249904,
+            249905
+          ],
+          "game_status": 4,
+          "game_type": 0
+        },
+        {
+          "id": 37419,
+          "artworks": [
+            104773
+          ],
+          "category": 0,
+          "cover": 272868,
+          "created_at": 1497865851,
+          "external_games": [
+            1985869,
+            3006243,
+            60088
+          ],
+          "first_release_date": 1499904000,
+          "game_engines": [
+            13
+          ],
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            13,
+            32
+          ],
+          "involved_companies": [
+            71837
+          ],
+          "name": "Dude Simulator",
+          "platforms": [
+            6
+          ],
+          "player_perspectives": [
+            1
+          ],
+          "rating": 76.74731072918968,
+          "rating_count": 33,
+          "release_dates": [
+            329628
+          ],
+          "screenshots": [
+            104715,
+            104714,
+            104717,
+            104716,
+            104718
+          ],
+          "similar_games": [
+            26574,
+            105011,
+            51577,
+            113895,
+            36553,
+            34823,
+            17548,
+            113360,
+            55689,
+            76263
+          ],
+          "slug": "dude-simulator",
+          "summary": "Dude Simulator is an open world sandbox game. This is a life simulator. The main objective is to enjoy what you are doing.",
+          "tags": [
+            1,
+            33,
+            38,
+            268435469,
+            268435488
+          ],
+          "themes": [
+            1,
+            33,
+            38
+          ],
+          "total_rating": 76.74731072918968,
+          "total_rating_count": 33,
+          "updated_at": 1747192535,
+          "url": "https://www.igdb.com/games/dude-simulator",
+          "videos": [
+            20974
+          ],
+          "websites": [
+            441804,
+            48269,
+            94363
+          ],
+          "checksum": "f59b51c2-ec03-c928-31f6-82fb80fb0b0c",
+          "language_supports": [
+            119197,
+            119198,
+            119199,
+            985808,
+            985809,
+            985810,
+            985811,
+            985812,
+            985813,
+            985814,
+            985815,
+            985816,
+            985817
+          ],
+          "collections": [
+            6800
+          ],
+          "game_type": 0
+        },
+        {
+          "id": 103261,
+          "age_ratings": [
+            131965,
+            131964,
+            131962,
+            131963,
+            131966,
+            131961,
+            188321
+          ],
+          "aggregated_rating": 69.4,
+          "aggregated_rating_count": 15,
+          "artworks": [
+            4986,
+            4985
+          ],
+          "category": 0,
+          "cover": 103275,
+          "created_at": 1528439582,
+          "dlcs": [
+            117492,
+            168484,
+            164732,
+            164576,
+            118919,
+            121529
+          ],
+          "external_games": [
+            1708293,
+            1005218,
+            1928820,
+            1592855,
+            1190938,
+            1457716,
+            1928930,
+            1934025,
+            2087251,
+            2703570,
+            1929270,
+            1930392,
+            1932731,
+            1934123,
+            1936024,
+            1936949,
+            1938197,
+            2085717,
+            1037400,
+            2586203,
+            2172387,
+            1057523
+          ],
+          "first_release_date": 1543881600,
+          "game_engines": [
+            574
+          ],
+          "game_modes": [
+            1
+          ],
+          "genres": [
+            5,
+            31
+          ],
+          "hypes": 28,
+          "involved_companies": [
+            68977,
+            68976
+          ],
+          "name": "Just Cause 4",
+          "platforms": [
+            48,
+            6,
+            49
+          ],
+          "player_perspectives": [
+            2
+          ],
+          "rating": 65.40228241464868,
+          "rating_count": 124,
+          "release_dates": [
+            155206,
+            153689,
+            153760
+          ],
+          "screenshots": [
+            256121,
+            256122,
+            213745,
+            213747,
+            213748,
+            213749,
+            213744,
+            213746,
+            1379610,
+            1379611
+          ],
+          "similar_games": [
+            103292,
+            37419,
+            19164,
+            115785,
+            47823,
+            26574,
+            1877,
+            106805,
+            81249,
+            103303
+          ],
+          "slug": "just-cause-4",
+          "summary": "Set in the fictional South American world of Solis, JUST CAUSE 4 takes the series incredible destruction and unique physics to a whole new level with the introduction of tornadoes and other Extreme Weather events. JUST CAUSE 4 has four distinct biomes: Rainforest, Grasslands, Alpine & Desert. With each biome offering its own individual, fully simulated weather event, players will have a truly unique experience as they traverse this deep, diverse world.\n\nRico Rodriguez returns in JUST CAUSE 4 with his trademark parachute, wingsuit and, of course his grapple hook, now enhanced with new functionality and fully customisable. Making it the most powerful and creative tool the player has ever had.",
+          "tags": [
+            1,
+            33,
+            38,
+            268435461,
+            268435487
+          ],
+          "themes": [
+            1,
+            33,
+            38
+          ],
+          "total_rating": 67.40114120732434,
+          "total_rating_count": 139,
+          "updated_at": 1747360363,
+          "url": "https://www.igdb.com/games/just-cause-4",
+          "videos": [
+            22409,
+            23165,
+            23460,
+            22410,
+            22610,
+            27486,
+            22904,
+            22407,
+            22411,
+            22408,
+            121137,
+            121163
+          ],
+          "websites": [
+            760157,
+            87740,
+            80020,
+            80019,
+            80018,
+            80017,
+            80770,
+            204732,
+            522290,
+            87739,
+            80771
+          ],
+          "checksum": "4c4e33e1-54e6-9f8c-4dce-cc5e5e05ac87",
+          "language_supports": [
+            55571,
+            55566,
+            55567,
+            55568,
+            55570,
+            55576,
+            55593,
+            55594,
+            55595,
+            55596,
+            55597,
+            55598,
+            55599,
+            55569,
+            55572,
+            55575,
+            55580,
+            55585,
+            55588,
+            55591,
+            55573,
+            55578,
+            55574,
+            55582,
+            55587,
+            55577,
+            55581,
+            55579,
+            55583,
+            55590,
+            55592,
+            55584,
+            55586,
+            55589
+          ],
+          "collections": [
+            111
+          ],
+          "game_type": 0
+        }
       ],
-      "slug": "doom-the-dark-ages",
-      "summary": "DOOM: The Dark Ages is the prequel to the critically acclaimed DOOM (2016) and DOOM Eternal that tells the epic cinematic origin story of the DOOM Slayer’s rage. Players will step into the blood-stained boots of the DOOM Slayer, in this never-before-seen dark and sinister medieval war against Hell.",
+      "slug": "grand-theft-auto-vi",
+      "storyline": "Vice City, USA.\n\nJason and Lucia have always known the deck is stacked against them. But when an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across the state of Leonida—forced to rely on each other more than ever if they want to make it out alive.",
+      "summary": "Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet.",
       "tags": [
         1,
-        17,
-        18,
+        27,
+        33,
+        38,
         268435461,
+        268435466,
+        268435487,
+        536870937,
         536871041,
-        536871384,
-        536871981,
-        536872220
+        536871133,
+        536872581,
+        536873336,
+        536875265
       ],
       "themes": [
         1,
-        17,
-        18
+        27,
+        33,
+        38
       ],
-      "total_rating": 88.06510886891377,
-      "total_rating_count": 10,
-      "updated_at": 1747475758,
-      "url": "https://www.igdb.com/games/doom-the-dark-ages",
+      "updated_at": 1747356912,
+      "url": "https://www.igdb.com/games/grand-theft-auto-vi",
       "videos": [
-        115699,
-        138635,
-        138636,
-        146713,
-        149518
+        {
+          "id": 102741,
+          "game": 52189,
+          "name": "Announcement Trailer",
+          "video_id": "QdBZY2fkU-0",
+          "checksum": "9f59f783-f3f3-1d01-76f0-d11f30f1d85e"
+        },
+        {
+          "id": 149277,
+          "game": 52189,
+          "name": "Release Date Trailer",
+          "video_id": "VQRLujxTm3c",
+          "checksum": "639870ce-064c-ca83-2d72-970095b24d43"
+        }
       ],
       "websites": [
-        791509,
-        791508,
-        752564,
-        752565,
-        753562,
-        644163,
-        706528,
-        706529,
-        706530,
-        706531,
-        644116,
-        706533,
-        706527
+        {
+          "id": 791153,
+          "category": 23,
+          "game": 52189,
+          "trusted": false,
+          "url": "https://store.playstation.com/en-us/concept/10000730",
+          "checksum": "223e1de8-56d6-7a20-0945-da95a32b4740",
+          "type": 23
+        },
+        {
+          "id": 649525,
+          "category": 14,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://www.reddit.com/r/GTA6/",
+          "checksum": "27d5bf80-d6d2-5f0a-8394-8858ab144386",
+          "type": 14
+        },
+        {
+          "id": 600951,
+          "category": 3,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+          "checksum": "51050db7-c633-9100-91bd-48cb31df3b7d",
+          "type": 3
+        },
+        {
+          "id": 600950,
+          "category": 1,
+          "game": 52189,
+          "trusted": false,
+          "url": "https://www.rockstargames.com/VI",
+          "checksum": "6f00a93d-6041-9b76-a658-fe6088ad4fd7",
+          "type": 1
+        },
+        {
+          "id": 694567,
+          "category": 9,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://youtube.com/@rockstargames",
+          "checksum": "01c5d99e-c1b7-10b3-5639-c27591be144f",
+          "type": 9
+        },
+        {
+          "id": 694568,
+          "category": 5,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://twitter.com/RockstarGames",
+          "checksum": "4132f73b-03d1-0f21-bfda-3f4e1b5cede8",
+          "type": 5
+        },
+        {
+          "id": 694569,
+          "category": 8,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://www.instagram.com/rockstargames",
+          "checksum": "e459474b-0d40-eabf-8bb2-c213cebe4afe",
+          "type": 8
+        },
+        {
+          "id": 707265,
+          "category": 19,
+          "game": 52189,
+          "trusted": true,
+          "url": "https://bsky.app/profile/rockstargames.com",
+          "checksum": "1b0aaf21-8d9b-c8b6-38a8-c4b190db2c9b",
+          "type": 19
+        }
       ],
-      "checksum": "912a2759-d8fb-f3ba-ed20-12ffdab94757",
+      "checksum": "963561ca-e1da-1c20-bb98-a44ebd646c50",
       "language_supports": [
-        1019854,
-        1019855,
-        1019856,
-        1154134,
-        1154135,
-        1154136,
-        1154137,
-        1154138,
-        1154139,
-        1154140,
-        1154141,
-        1154142,
-        1154143,
-        1154144,
-        1154145,
-        1154146,
-        1154147,
-        1154148,
-        1154149,
-        1154150,
-        1154151,
-        1154152,
-        1154153,
-        1154154,
-        1154155,
-        1154156,
-        1154157,
-        1154158,
-        1154159,
-        1154160,
-        1154161
+        861846,
+        861847,
+        861848
       ],
       "collections": [
-        129
+        847
       ],
       "game_type": 0
     }
