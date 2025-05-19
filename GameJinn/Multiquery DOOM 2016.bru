@@ -26,20 +26,25 @@ body:text {
       screenshots.image_id,
       screenshots.url,
       alternative_names.name,
-      franchises.*,
-      game_engines.*,
-      genres.*,
-      game_modes.*,
-      involved_companies.*,
+      franchises.name,
+      game_engines.name,
+      genres.name,
+      game_modes.name,
+      involved_companies.publisher,
+      involved_companies.developer,
       involved_companies.company.name,
       keywords.name,
       platforms.name,
-      player_perspectives.*,
-      similar_games.*,
+      player_perspectives.name,
+      similar_games.name,
+      similar_games.slug,
       videos.name,
       videos.video_id,
       language_supports.language.name,
-      language_supports.language.native_name;
+      language_supports.language.native_name,
+      artworks.image_id,
+      artworks.url,
+      dlcs.name;
     where id = 7351;
     limit 1;
     exclude tags;

@@ -1,3 +1,6 @@
+import { GameInfoGrid } from "@/components/games/GameInfoGrid";
+import { GameScreenshotsGallery } from "@/components/games/GameScreenshotsGallery";
+import { GameStoreLinks } from "@/components/games/GameStoreLinks";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +12,7 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { igdbApi } from "@/lib/api/igdb";
-import type { GameWithTimeToBeat, TimeToBeat } from "@/lib/api/igdb";
+import type { GameWithTimeToBeat, TimeToBeat } from "@/lib/api/igdb.types";
 import type {
 	AlternativeName,
 	Franchise,
@@ -127,13 +130,15 @@ function GameDetailsPage() {
 									).toLocaleDateString()}
 								</span>
 							)}
-							{/* Placeholder meta badges */}
-							<span className="bg-muted px-3 py-1 rounded text-xs font-semibold">
-								Average playtime:{" "}
-								{game.timeToBeat && typeof game.timeToBeat.normally === "number"
-									? `${Math.round(game.timeToBeat.normally / 3600)}h`
-									: "N/A"}
-							</span>
+							{game.timeToBeat && (
+								<span className="bg-muted px-3 py-1 rounded text-xs font-semibold">
+									Average playtime:{" "}
+									{game.timeToBeat &&
+									typeof game.timeToBeat.normally === "number"
+										? `${Math.round(game.timeToBeat.normally / 3600)}h`
+										: "N/A"}
+								</span>
+							)}
 						</div>
 					</div>
 
@@ -170,176 +175,7 @@ function GameDetailsPage() {
 					</div>
 
 					{/* Info Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-muted/40 rounded-lg p-4">
-						<div>
-							<h4 className="text-sm font-medium mb-1">Platforms</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.platforms?.map((platform: Platform) => (
-									<Badge key={platform.id} variant="secondary">
-										{platform.name}
-									</Badge>
-								)) || <span className="text-muted-foreground">N/A</span>}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Genres</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.genres?.map((genre: Genre) => (
-									<Badge key={genre.id} variant="secondary">
-										{genre.name}
-									</Badge>
-								)) || <span className="text-muted-foreground">N/A</span>}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Release Date</h4>
-							<div>
-								{game.first_release_date ? (
-									new Date(game.first_release_date * 1000).toLocaleDateString()
-								) : (
-									<span className="text-muted-foreground">TBA</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Alternative Names</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.alternative_names?.length ? (
-									game.alternative_names.map((alt: AlternativeName) => (
-										<Badge key={alt.id} variant="outline">
-											{alt.name}
-										</Badge>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Franchise</h4>
-							<div>
-								{game.franchises?.length ? (
-									game.franchises.map((fr: Franchise) => (
-										<a
-											key={fr.id}
-											href={fr.url}
-											className="text-blue-500 hover:underline"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{fr.name}
-										</a>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Engine</h4>
-							<div>
-								{game.game_engines?.length ? (
-									game.game_engines.map((eng: GameEngine) => (
-										<a
-											key={eng.id}
-											href={eng.url}
-											className="text-blue-500 hover:underline"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{eng.name}
-										</a>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Involved Companies</h4>
-							<div>
-								{game.involved_companies?.length ? (
-									game.involved_companies.map((ic: InvolvedCompany) => (
-										<span key={ic.id} className="inline-block mr-2">
-											{ic.company && (
-												<>
-													{ic.company.name}
-													{ic.developer && " (Developer)"}
-													{ic.publisher && " (Publisher)"}
-												</>
-											)}
-										</span>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div className="md:col-span-2">
-							<h4 className="text-sm font-medium mb-1">Tags</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.keywords?.length ? (
-									game.keywords.map((kw: Keyword) => (
-										<Badge key={kw.id} variant="outline">
-											{kw.name}
-										</Badge>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Player Perspectives</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.player_perspectives?.length ? (
-									game.player_perspectives.map((pp: PlayerPerspective) => (
-										<Badge key={pp.id} variant="outline">
-											{pp.name}
-										</Badge>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div>
-							<h4 className="text-sm font-medium mb-1">Game Modes</h4>
-							<div className="flex flex-wrap gap-2">
-								{game.game_modes?.length ? (
-									game.game_modes.map((gm: GameMode) => (
-										<Badge key={gm.id} variant="outline">
-											{gm.name}
-										</Badge>
-									))
-								) : (
-									<span className="text-muted-foreground">N/A</span>
-								)}
-							</div>
-						</div>
-						<div className="md:col-span-2">
-							<h4 className="text-sm font-medium mb-1">Website</h4>
-							<div>
-								{(() => {
-									const official = game.websites?.find(
-										(w: Website) => w.category === 1 && w.url,
-									);
-									if (!official)
-										return <span className="text-muted-foreground">N/A</span>;
-									return (
-										<a
-											href={official.url}
-											className="text-blue-500 hover:underline"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{official.url.replace(/^https?:\/\//, "")}
-										</a>
-									);
-								})()}
-							</div>
-						</div>
-					</div>
+					<GameInfoGrid />
 
 					{/* System Requirements Placeholder */}
 					<div className="bg-muted/40 rounded-lg p-4">
@@ -372,108 +208,10 @@ function GameDetailsPage() {
 					</div>
 
 					{/* Screenshots Row */}
-					{screenshots.length > 0 && (
-						<div className="flex gap-2 w-full overflow-x-auto pb-2">
-							{screenshots.map((shot: Screenshot, idx: number) => (
-								<Dialog key={shot.id}>
-									<DialogTrigger asChild>
-										<img
-											src={
-												shot.image_id
-													? `//images.igdb.com/igdb/image/upload/t_720p/${shot.image_id}.webp`
-													: shot.url.startsWith("//")
-														? `https:${shot.url}`
-														: shot.url
-											}
-											alt={`${game.name} screenshot`}
-											className="rounded-lg object-cover h-24 w-auto min-w-[120px] cursor-pointer hover:brightness-90 transition"
-										/>
-									</DialogTrigger>
-									<DialogContent className="min-w-[90svw] grid-rows-[auto_minmax(0,1fr)_auto] px-0 py-0 h-[90svh]">
-										<VisuallyHidden>
-											<DialogHeader className="p-6 pb-0">
-												<DialogTitle>{game.name}</DialogTitle>
-												<DialogDescription>
-													Screenshot {idx + 1} of {screenshots.length}
-												</DialogDescription>
-											</DialogHeader>
-										</VisuallyHidden>
-										<div className="grid gap-4 py-4 overflow-y-auto h-dvh items-center">
-											<div className="flex flex-col justify-between items-center">
-												<img
-													src={
-														shot.image_id
-															? `//images.igdb.com/igdb/image/upload/t_1080p_2x/${shot.image_id}.webp`
-															: shot.url.startsWith("//")
-																? `https:${shot.url}`
-																: shot.url
-													}
-													alt={`${game.name} screenshot`}
-													className="rounded-lg object-cover"
-												/>
-											</div>
-										</div>
-									</DialogContent>
-								</Dialog>
-							))}
-						</div>
-					)}
+					<GameScreenshotsGallery />
 
 					{/* Where to buy section (overhauled) */}
-					<div className="w-full bg-muted/40 rounded-lg p-4">
-						<h4 className="font-semibold mb-2">Where to buy</h4>
-						{game.websites && (
-							<div className="flex flex-col gap-2">
-								{/* Store Buttons */}
-								{game.platforms &&
-									game.websites &&
-									game.platforms.map((platform: Platform) => {
-										const store = platformStoreMap[platform.name];
-										if (!store) return null;
-										const website = game.websites?.find(
-											(w: Website) =>
-												w.category === store.category &&
-												isValidStoreUrl(w.category, w.url),
-										);
-										if (!website) return null;
-										return (
-											<Button
-												asChild
-												variant="secondary"
-												size="sm"
-												className="w-full"
-												key={platform.id}
-											>
-												<a
-													href={website.url}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													{store.displayName} ({platform.name})
-												</a>
-											</Button>
-										);
-									})}
-								{/* If no buttons rendered, show fallback */}
-								{game.platforms &&
-									game.websites &&
-									game.platforms.every((platform: Platform) => {
-										const store = platformStoreMap[platform.name];
-										if (!store) return true;
-										const website = game.websites?.find(
-											(w: Website) =>
-												w.category === store.category &&
-												isValidStoreUrl(w.category, w.url),
-										);
-										return !website;
-									}) && (
-										<div className="text-muted-foreground text-sm">
-											No store links available.
-										</div>
-									)}
-							</div>
-						)}
-					</div>
+					<GameStoreLinks />
 				</div>
 			</div>
 

@@ -1,6 +1,6 @@
 import axios, { type InternalAxiosRequestConfig } from "axios";
 import type { IGDBRelation } from "./igdb.types";
-import type { Game } from "./igdb.types.ts";
+import type { Game, TimeToBeat } from "./igdb.types.ts";
 import { IGDBQueryBuilder } from "./igdbQueryBuilder";
 
 const PROXY_URL = "http://localhost:8080/";
@@ -15,10 +15,19 @@ const igdbClient = axios.create({
 	},
 });
 
+// IMPORTANT: Set your IGDB Bearer token in a .env file as VITE_IGDB_BEARER_TOKEN
+// Example .env:
+// VITE_IGDB_BEARER_TOKEN=your_token_here
 // Add auth token interceptor
 igdbClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
 	if (config.headers) {
-		config.headers.Authorization = "Bearer r9tat1r4xav7rfoeegngf4siuow7zz";
+		const token = import.meta.env.VITE_IGDB_BEARER_TOKEN;
+		if (!token) {
+			console.warn(
+				"IGDB Bearer token is not set in .env (VITE_IGDB_BEARER_TOKEN)",
+			);
+		}
+		config.headers.Authorization = `Bearer ${token}`;
 	}
 	return config;
 });
