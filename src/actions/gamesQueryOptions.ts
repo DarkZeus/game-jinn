@@ -7,9 +7,9 @@ export const mostAnticipatedGamesQueryOptions = queryOptions({
 });
 
 export function searchGamesQueryOptions(search: string) {
-	return {
+	return queryOptions({
 		queryKey: ["searchGames", search],
 		queryFn: () => igdbApi.searchGames(search),
 		staleTime: 1000 * 60, // 1 minute
-	};
+	});
 }

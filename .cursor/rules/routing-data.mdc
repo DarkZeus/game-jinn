@@ -1,0 +1,52 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Routing and Data Fetching Guide
+
+## Routing
+This project uses TanStack Router for routing. Key concepts:
+
+- Routes are defined in `src/routes/`
+- The route tree is generated in `src/routeTree.gen.ts`
+- Use the `createFileRoute` helper for route definitions
+- Implement proper loading and error states
+
+## Data Fetching
+The project uses TanStack Query (React Query) for data management:
+
+### Query Setup
+```typescript
+import { useQuery } from '@tanstack/react-query'
+
+// Example query
+const { data, isLoading, error } = useQuery({
+  queryKey: ['key'],
+  queryFn: () => fetchData()
+})
+```
+
+### Mutation Setup
+```typescript
+import { useMutation } from '@tanstack/react-query'
+
+// Example mutation
+const mutation = useMutation({
+  mutationFn: (data) => updateData(data)
+})
+```
+
+## API Integration
+- API calls should be placed in `src/actions/`
+- Use Axios for HTTP requests
+- Implement proper error handling
+- Use TypeScript interfaces for request/response types
+
+## Best Practices
+- Keep route components focused on routing concerns
+- Use React Query's caching capabilities
+- Implement proper loading states
+- Handle errors gracefully
+- Use TypeScript for type safety
+- Follow the project's API error handling patterns

@@ -1,0 +1,23 @@
+meta {
+  name: Get all games
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://api.igdb.com/v4/games
+  body: text
+  auth: bearer
+}
+
+headers {
+  Client-ID: t7c5dlstilqkeww1gffxpp7qkmqzg2
+}
+
+auth:bearer {
+  token: vsqkg4nb8556a68vg3626zct6mfev4
+}
+
+body:text {
+  fields *; limit 10; where id = 302704;
+}

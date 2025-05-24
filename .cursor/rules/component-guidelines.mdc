@@ -1,0 +1,52 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Component Development Guidelines
+
+## Component Structure
+- Components should be placed in `src/components/`
+- Each component should have its own directory with the following structure:
+  ```
+  component-name/
+  ├── index.tsx        # Main component file
+  ├── types.ts         # Component-specific types
+  └── styles.css       # Component-specific styles (if needed)
+  ```
+- All files and directories should use kebab-case naming convention (e.g., `user-profile/`, `auth-form/`, `button-group/`)
+
+## UI Components
+This project uses Shadcn UI components. To add new components:
+
+1. Install using the shadcn CLI:
+   ```bash
+   pnpx shadcn@latest add [component-name]
+   ```
+
+2. Available components include:
+   - Button
+   - Dialog
+   - Dropdown Menu
+   - Label
+   - Progress
+   - Select
+   - Separator
+   - Switch
+   - Tabs
+   - Tooltip
+
+## Styling Guidelines
+- Use Tailwind CSS for styling
+- Follow the project's color scheme and design system
+- Use the `cn()` utility from `src/lib/utils.ts` for conditional class names
+- Prefer composition over inheritance
+- Keep components focused and single-responsibility
+
+## Best Practices
+- Use TypeScript for all components
+- Implement proper prop types and interfaces
+- Use React Query for data fetching
+- Follow the project's error handling patterns
+- Write tests for complex components
+- Document complex logic with comments

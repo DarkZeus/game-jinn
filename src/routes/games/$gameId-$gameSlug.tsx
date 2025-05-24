@@ -1,35 +1,10 @@
-import { GameInfoGrid } from "@/components/games/GameInfoGrid";
-import { GameScreenshotsGallery } from "@/components/games/GameScreenshotsGallery";
-import { GameStoreLinks } from "@/components/games/GameStoreLinks";
-import { Badge } from "@/components/ui/badge";
+import { GameInfoGrid } from "@/components/games/game-info-grid";
+import { GameScreenshotsGallery } from "@/components/games/game-screenshots-gallery";
+import { GameStoreLinks } from "@/components/games/game-store-links";
 import { Button } from "@/components/ui/button";
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@/components/ui/dialog";
 import { igdbApi } from "@/lib/api/igdb";
-import type { GameWithTimeToBeat, TimeToBeat } from "@/lib/api/igdb.types";
-import type {
-	AlternativeName,
-	Franchise,
-	Game,
-	GameEngine,
-	GameMode,
-	Genre,
-	InvolvedCompany,
-	Keyword,
-	Platform,
-	PlayerPerspective,
-	Screenshot,
-	SimilarGame,
-	Video,
-	Website,
-} from "@/lib/api/igdb.types";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import type { GameWithTimeToBeat } from "@/lib/api/igdb.types";
+import type { Screenshot, SimilarGame, Video } from "@/lib/api/igdb.types";
 import {
 	createFileRoute,
 	redirect,
@@ -111,8 +86,6 @@ const platformStoreMap: Record<
 
 function GameDetailsPage() {
 	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
-	// Screenshots may not match the full Screenshot type, so define a minimal type
-	const screenshots: Screenshot[] = game.screenshots || [];
 
 	return (
 		<div className="px-4 md:px-12 pb-8 pt-4">
@@ -178,14 +151,14 @@ function GameDetailsPage() {
 					<GameInfoGrid />
 
 					{/* System Requirements Placeholder */}
-					<div className="bg-muted/40 rounded-lg p-4">
+					{/* <div className="bg-muted/40 rounded-lg p-4">
 						<h2 className="text-xl font-semibold mb-2">
 							System requirements for PC
 						</h2>
 						<div className="text-muted-foreground">
 							Minimum: <br />- 64-bit processor and operating system
 						</div>
-					</div>
+					</div> */}
 				</div>
 
 				{/* Right/Sidebar Column */}

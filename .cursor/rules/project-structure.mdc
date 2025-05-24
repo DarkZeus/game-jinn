@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure Guide
+
+This is a React-based web application using Vite, TypeScript, and TanStack Router. Here's a breakdown of the key directories and files:
+
+## Main Entry Points
+- [src/main.tsx](mdc:src/main.tsx) - The main application entry point
+- [src/routeTree.gen.ts](mdc:src/routeTree.gen.ts) - Generated route tree for TanStack Router
+
+## Key Directories
+- `src/components/` - Reusable UI components
+- `src/routes/` - Page components and route definitions
+- `src/lib/` - Utility functions and shared code
+- `src/hooks/` - Custom React hooks
+- `src/actions/` - Server actions and API handlers
+- `src/types/` - TypeScript type definitions
+- `src/integrations/` - Third-party service integrations
+
+## Configuration Files
+- [vite.config.js](mdc:vite.config.js) - Vite configuration
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
+- [biome.json](mdc:biome.json) - Biome (formatter/linter) configuration
+- [components.json](mdc:components.json) - Shadcn UI components configuration
+
+## Development
+- Use `pnpm run dev:all` to start both the development server and proxy
+- Use `pnpm run check` to run Biome checks
+- Use `pnpm run format` to format code
+- Use `pnpm run lint` to lint code

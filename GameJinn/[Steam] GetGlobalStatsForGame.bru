@@ -1,0 +1,19 @@
+meta {
+  name: [Steam] GetGlobalStatsForGame
+  type: http
+  seq: 12
+}
+
+get {
+  url: https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=620&key={{SteamKey}}&format=json&steamid=76561198045006973&l=uk
+  body: none
+  auth: inherit
+}
+
+params:query {
+  appid: 620
+  key: {{SteamKey}}
+  format: json
+  steamid: 76561198045006973
+  l: uk
+}

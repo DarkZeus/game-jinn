@@ -1,6 +1,7 @@
 import {
 	Sidebar,
 	SidebarContent,
+	SidebarFooter,
 	SidebarGroup,
 	SidebarGroupContent,
 	SidebarHeader,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Gamepad2, LayoutDashboard } from "lucide-react";
+import { ModeToggle } from "../mode-toggle";
 
 const navItems = [
 	{ icon: LayoutDashboard, label: "Dashboard", href: "/" },
@@ -66,6 +68,9 @@ export function AppSidebar() {
 					</SidebarGroupContent>
 				</SidebarGroup>
 			</SidebarContent>
+			<SidebarFooter>
+				<ModeToggle />
+			</SidebarFooter>
 		</Sidebar>
 	);
 }

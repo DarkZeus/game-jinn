@@ -74,7 +74,6 @@ export const GameInfoGrid = () => {
 							<a
 								key={fr.id}
 								href={fr.url}
-								className="text-blue-500 hover:underline"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -94,7 +93,6 @@ export const GameInfoGrid = () => {
 							<a
 								key={eng.id}
 								href={eng.url}
-								className="text-blue-500 hover:underline"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
