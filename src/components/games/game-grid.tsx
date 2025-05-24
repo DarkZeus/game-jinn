@@ -21,6 +21,7 @@ import { Filter, Search, Star } from "lucide-react";
 import { useState } from "react";
 import { useDebounce } from "use-debounce";
 import { GameImage } from "./game-image";
+import { GamesSkeleton } from "./skeleton";
 
 // No props needed - component is now self-contained
 /**
@@ -87,9 +88,7 @@ export const SearchableGameGrid = () => {
 
 			{/* Games Grid */}
 			{isLoading ? (
-				<div className="text-center py-12 text-muted-foreground">
-					Loading games...
-				</div>
+				<GamesSkeleton />
 			) : (
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{games.map((game, index) => (
