@@ -1,14 +1,18 @@
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@/components/ui/dialog";
 import type { Screenshot } from "@/lib/api/igdb.types";
+import { getScreenshotUrls, normalizeIGDBUrl } from "@/lib/utils/image";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useLoaderData } from "@tanstack/react-router";
+import { useState } from "react";
+import { OptimizedImage } from "../ui/optimized-image";
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from "../ui/sheet";
+import { GameImage } from "./game-image";
 
 /**
  * GameScreenshotsGallery renders a horizontal row of screenshots with dialogs for full view.
@@ -16,54 +20,78 @@ import { useLoaderData } from "@tanstack/react-router";
  */
 export const GameScreenshotsGallery = () => {
 	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
-	const screenshots: Screenshot[] = game.screenshots || [];
+	const images: Screenshot[] =
+		Array.from([...(game.screenshots || []), ...(game.artworks || [])]) || [];
 
-	if (screenshots.length === 0) return null;
+	if (images.length === 0) return null;
+
+	// Get screenshot URLs for thumbnail and full resolution
+	const getScreenshotImageUrls = (shot: Screenshot) => {
+		if (shot.image_id) {
+			const screenshotUrls = getScreenshotUrls(shot.image_id);
+			return {
+				thumbnail: screenshotUrls.medium, // Use medium for thumbnails
+				thumbnailThumb: screenshotUrls.thumb, // Use thumb for progressive loading
+				fullRes: screenshotUrls.fullRes, // Use full resolution for modal
+				fullResThumb: screenshotUrls.large, // Use large as thumb for modal
+			};
+		}
+
+		// Fallback for legacy URLs
+		const normalizedUrl = normalizeIGDBUrl(shot.url);
+		return {
+			thumbnail: normalizedUrl,
+			thumbnailThumb: normalizedUrl,
+			fullRes: normalizedUrl,
+			fullResThumb: normalizedUrl,
+		};
+	};
 
 	return (
-		<div className="flex gap-2 w-full overflow-x-auto pb-2">
-			{screenshots.map((shot: Screenshot, idx: number) => (
-				<Dialog key={shot.id}>
-					<DialogTrigger asChild>
-						<img
-							src={
-								shot.image_id
-									? `//images.igdb.com/igdb/image/upload/t_720p/${shot.image_id}.webp`
-									: shot.url.startsWith("//")
-										? `https:${shot.url}`
-										: shot.url
-							}
-							alt={`${game.name} screenshot`}
-							className="rounded-lg object-cover h-24 w-auto min-w-[120px] cursor-pointer hover:brightness-90 transition"
-						/>
-					</DialogTrigger>
-					<DialogContent className="min-w-[90svw] grid-rows-[auto_minmax(0,1fr)_auto] px-0 py-0 h-[90svh]">
-						<VisuallyHidden>
-							<DialogHeader className="p-6 pb-0">
-								<DialogTitle>{game.name}</DialogTitle>
-								<DialogDescription>
-									Screenshot {idx + 1} of {screenshots.length}
-								</DialogDescription>
-							</DialogHeader>
-						</VisuallyHidden>
-						<div className="grid gap-4 py-4 overflow-y-auto h-dvh items-center">
-							<div className="flex flex-col justify-between items-center">
-								<img
-									src={
-										shot.image_id
-											? `//images.igdb.com/igdb/image/upload/t_1080p_2x/${shot.image_id}.webp`
-											: shot.url.startsWith("//")
-												? `https:${shot.url}`
-												: shot.url
-									}
+		<div className="w-full">
+			<h4 className="font-semibold mb-2 opacity-50">Screenshots</h4>
+			<div className="flex gap-2 w-full overflow-x-auto pb-2">
+				{images.map((shot: Screenshot, idx: number) => {
+					const imageUrls = getScreenshotImageUrls(shot);
+					const [isOpen, setIsOpen] = useState(false);
+
+					return (
+						<Sheet key={shot.id} open={isOpen} onOpenChange={setIsOpen}>
+							<SheetTrigger asChild>
+								<div className="cursor-pointer hover:brightness-90 transition">
+									<OptimizedImage
+										src={imageUrls.thumbnail}
+										thumbSrc={imageUrls.thumbnailThumb}
+										alt={`${game.name} screenshot`}
+										className="rounded-lg object-cover h-24 w-auto min-w-[120px]"
+									/>
+								</div>
+							</SheetTrigger>
+							<SheetContent
+								className="flex flex-col items-center justify-center max-w-[100dvw] max-h-[100dvh]"
+								side="fade"
+								onOpenChange={setIsOpen}
+							>
+								<VisuallyHidden>
+									<SheetHeader>
+										<SheetTitle>{game.name}</SheetTitle>
+										<SheetDescription>
+											{`${game.name} screenshot` || "Screenshot"}
+										</SheetDescription>
+									</SheetHeader>
+								</VisuallyHidden>
+								<OptimizedImage
+									src={imageUrls.fullRes}
+									thumbSrc={imageUrls.fullResThumb}
 									alt={`${game.name} screenshot`}
-									className="rounded-lg object-cover"
+									className="max-w-[90dvw] max-h-[90dvh] object-cover rounded-lg"
+									priority={true}
 								/>
-							</div>
-						</div>
-					</DialogContent>
-				</Dialog>
-			))}
+							</SheetContent>
+						</Sheet>
+					);
+				})}
+			</div>
 		</div>
 	);
 };

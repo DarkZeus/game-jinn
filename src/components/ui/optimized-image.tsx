@@ -70,48 +70,31 @@ export const OptimizedImage = ({
 	const shouldShowThumb = thumbSrc && !isFullImageLoaded && !hasError;
 	const shouldShowFull = isInView && !hasError;
 
-	// Check if className contains aspect ratio - if not, provide a fallback
-	const hasAspectRatio = className?.includes("aspect-");
-	const hasFixedHeight = className?.includes("h-");
-	const containerClass = cn(
-		"relative overflow-hidden",
-		hasAspectRatio || hasFixedHeight
-			? className
-			: cn("min-h-[200px] w-full", className), // Fallback dimensions
-	);
-
 	return (
-		<div ref={imgRef} className={containerClass}>
-			{/* Thumbnail image - blurred placeholder */}
-			{shouldShowThumb && (
-				<img
-					src={thumbSrc}
-					alt={alt}
-					className={cn(
-						"absolute inset-0 w-full h-full object-cover transition-opacity duration-300",
-						"filter blur-sm scale-110", // Blur and slightly scale to hide blur edges
-						isThumbLoaded ? "opacity-100" : "opacity-0",
-					)}
-					onLoad={() => setIsThumbLoaded(true)}
-					loading="eager" // Load thumb immediately
-					style={{ objectFit: "cover" }} // Ensure cover behavior
-				/>
-			)}
-
-			{/* Full resolution image */}
+		<div ref={imgRef} className={cn("relative", className)}>
+			{/* Full resolution image - positioned normally to get intrinsic dimensions */}
 			{shouldShowFull && (
 				<img
 					src={src}
 					alt={alt}
-					className={cn(
-						"absolute inset-0 w-full h-full object-cover transition-opacity duration-500",
-						isFullImageLoaded ? "opacity-100" : "opacity-0",
-					)}
+					className="w-full h-full object-cover transition-opacity duration-500"
+					style={{ opacity: isFullImageLoaded ? 1 : 0 }}
 					onLoad={handleFullImageLoad}
 					onError={handleError}
 					loading={priority ? "eager" : "lazy"}
 					decoding="async"
-					style={{ objectFit: "cover" }} // Ensure cover behavior
+				/>
+			)}
+
+			{/* Thumbnail image - absolutely positioned as blur overlay */}
+			{shouldShowThumb && (
+				<img
+					src={thumbSrc}
+					alt={alt}
+					className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 filter blur-sm scale-110"
+					style={{ opacity: isThumbLoaded && !isFullImageLoaded ? 1 : 0 }}
+					onLoad={() => setIsThumbLoaded(true)}
+					loading="eager"
 				/>
 			)}
 

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/games/")({
 	pendingMinMs: 1,
 	pendingMs: 1,
 	component: GamesPage,
-	pendingComponent: GamesSkeleton,
+	pendingComponent: () => <GamesSkeleton withHeader />,
 });
 
 function GamesPage() {

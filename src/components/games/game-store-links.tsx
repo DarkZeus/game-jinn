@@ -54,8 +54,8 @@ export const GameStoreLinks = () => {
 	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
 
 	return (
-		<div className="w-full bg-muted/40 rounded-lg p-4">
-			<h4 className="font-semibold mb-2">Where to buy</h4>
+		<div className="w-full">
+			<h4 className="font-semibold mb-2 opacity-50">Where to buy</h4>
 			{game.websites && (
 				<div className="flex flex-col gap-2">
 					{/* Store Buttons */}

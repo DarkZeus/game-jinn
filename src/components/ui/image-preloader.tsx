@@ -1,6 +1,6 @@
 import type { Game } from "@/lib/api/igdb.types";
 import { isObject } from "@/lib/utils";
-import { getProgressiveImageUrls } from "@/lib/utils/image";
+import { getResponsiveProgressiveImageUrls } from "@/lib/utils/image";
 import { useEffect } from "react";
 
 type ImagePreloaderProps = {
@@ -11,6 +11,7 @@ type ImagePreloaderProps = {
 /**
  * ImagePreloader component that preloads critical game images.
  * Uses link preload to hint browsers about critical resources.
+ * Now uses responsive image sizing for optimal quality on all displays.
  */
 export const ImagePreloader = ({ games, count = 4 }: ImagePreloaderProps) => {
 	useEffect(() => {
@@ -21,7 +22,7 @@ export const ImagePreloader = ({ games, count = 4 }: ImagePreloaderProps) => {
 				continue;
 			}
 
-			const imageUrls = getProgressiveImageUrls(game.cover.image_id);
+			const imageUrls = getResponsiveProgressiveImageUrls(game.cover.image_id);
 
 			// Preload both thumb and full images for critical games
 			for (const url of [imageUrls.thumb, imageUrls.full]) {

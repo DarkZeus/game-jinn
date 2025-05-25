@@ -32,7 +32,7 @@ declare module "@tanstack/react-router" {
 }
 
 scan({
-	enabled: false,
+	enabled: import.meta.env.VITE_SCAN === "true",
 });
 
 // Render the app

@@ -1,7 +1,10 @@
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import type { Game } from "@/lib/api/igdb.types";
 import { isObject } from "@/lib/utils";
-import { getProgressiveImageUrls, normalizeIGDBUrl } from "@/lib/utils/image";
+import {
+	getResponsiveProgressiveImageUrls,
+	normalizeIGDBUrl,
+} from "@/lib/utils/image";
 import type { ReactNode } from "react";
 
 type GameImageProps = {
@@ -14,7 +17,8 @@ type GameImageProps = {
 
 /**
  * GameImage component optimized for IGDB game cover images.
- * Handles different IGDB URL formats and implements progressive loading.
+ * Handles different IGDB URL formats and implements progressive loading
+ * with responsive image sizing for optimal quality on all displays.
  */
 export const GameImage = ({
 	game,
@@ -29,9 +33,9 @@ export const GameImage = ({
 			return null;
 		}
 
-		// New IGDB format with image_id
+		// New IGDB format with image_id - use responsive sizing
 		if (game.cover.image_id) {
-			return getProgressiveImageUrls(game.cover.image_id);
+			return getResponsiveProgressiveImageUrls(game.cover.image_id);
 		}
 
 		// Legacy format with direct URL

@@ -12,7 +12,8 @@
     "lint": "biome lint",
     "check": "biome check --write src",
     "proxy": "tsx src/server/proxy.ts",
-    "dev:all": "concurrently \"pnpm run dev\" \"pnpm run proxy\""
+    "dev:all": "concurrently \"pnpm run dev\" \"pnpm run proxy\"",
+    "dev:all:scan": "cross-env VITE_SCAN=true concurrently \"pnpm run dev\" \"pnpm run proxy\""
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.9",
@@ -46,7 +47,8 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.6",
     "tailwindcss-animate": "^1.0.7",
-    "use-debounce": "^10.0.4"
+    "use-debounce": "^10.0.4",
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -57,6 +59,7 @@
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "jsdom": "^26.0.0",
     "tsx": "^4.19.4",
     "typescript": "^5.7.2",

@@ -18,19 +18,46 @@ import { isObject } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { Filter, Search, Star } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import { GameImage } from "./game-image";
 import { GamesSkeleton } from "./skeleton";
 
+// SearchInput component - handles search state internally to prevent grid re-renders
+type SearchInputProps = {
+	onSearchChange: (search: string) => void;
+};
+
+const SearchInput = ({ onSearchChange }: SearchInputProps) => {
+	const [search, setSearch] = useState("");
+	const [debouncedSearch] = useDebounce(search, 400);
+
+	// Update parent when debounced search changes
+	useEffect(() => {
+		onSearchChange(debouncedSearch);
+	}, [debouncedSearch, onSearchChange]);
+
+	return (
+		<div className="relative flex-1">
+			<Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+			<Input
+				type="search"
+				placeholder="Search games..."
+				className="pl-8"
+				value={search}
+				onChange={(e) => setSearch(e.target.value)}
+			/>
+		</div>
+	);
+};
+
 // No props needed - component is now self-contained
 /**
  * SearchableGameGrid displays search/filters and a grid of game cards.
- * Handles search state internally to prevent unnecessary page re-renders.
+ * Now optimized to prevent unnecessary re-renders during search input.
  */
 export const SearchableGameGrid = () => {
-	const [search, setSearch] = useState("");
-	const [debouncedSearch] = useDebounce(search, 400);
+	const [debouncedSearch, setDebouncedSearch] = useState("");
 
 	const gamesQuery = useQuery(
 		debouncedSearch
@@ -40,24 +67,17 @@ export const SearchableGameGrid = () => {
 
 	const games = gamesQuery.data || [];
 	const isLoading = gamesQuery.isLoading;
+	const hasSearchTerm = debouncedSearch.trim().length > 0;
+	const showNoResults = !isLoading && games.length === 0 && hasSearchTerm;
 
 	return (
 		<div className="space-y-6">
 			{/* Preload critical images */}
-			<ImagePreloader games={games} count={4} />
+			{/* <ImagePreloader games={games} count={4} /> */}
 
 			{/* Filters */}
 			<div className="flex items-center gap-4">
-				<div className="relative flex-1">
-					<Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-					<Input
-						type="search"
-						placeholder="Search games..."
-						className="pl-8"
-						value={search}
-						onChange={(e) => setSearch(e.target.value)}
-					/>
-				</div>
+				<SearchInput onSearchChange={setDebouncedSearch} />
 				<Select defaultValue="all">
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Platform" />
@@ -89,6 +109,15 @@ export const SearchableGameGrid = () => {
 			{/* Games Grid */}
 			{isLoading ? (
 				<GamesSkeleton />
+			) : showNoResults ? (
+				<div className="text-center py-12">
+					<div className="text-muted-foreground mb-2">
+						No games found for "{debouncedSearch}"
+					</div>
+					<div className="text-sm text-muted-foreground">
+						Try adjusting your search terms or browse our most anticipated games
+					</div>
+				</div>
 			) : (
 				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{games.map((game, index) => (

@@ -146,6 +146,7 @@ export type Game = {
 	themes?: Array<{ id: number; name: string }>;
 	websites?: Website[];
 	screenshots?: Screenshot[];
+	artworks?: Screenshot[];
 	alternative_names?: AlternativeName[];
 	franchises?: Franchise[];
 	game_engines?: GameEngine[];

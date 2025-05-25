@@ -1,29 +1,34 @@
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 
-export function GamesSkeleton() {
+export function GamesSkeleton({
+	withHeader = false,
+}: { withHeader?: boolean }) {
 	return (
 		<div className="space-y-6">
-			{/* Header Skeleton */}
-			{/* <div className="flex items-center justify-between">
-				<div className="space-y-1">
-					<Skeleton className="h-9 w-[200px]" />
-					<Skeleton className="h-4 w-[300px]" />
-				</div>
-				<div className="flex items-center gap-2">
-					<Skeleton className="h-9 w-9" />
-					<Skeleton className="h-9 w-9" />
-				</div>
-			</div> */}
+			{withHeader ? (
+				<>
+					{/* Header Skeleton */}
+					<div className="flex items-center justify-between">
+						<div className="space-y-1">
+							<Skeleton className="h-9 w-[200px]" />
+							<Skeleton className="h-4 w-[300px]" />
+						</div>
+						<div className="flex items-center gap-2">
+							<Skeleton className="h-9 w-9" />
+							<Skeleton className="h-9 w-9" />
+						</div>
+					</div>
 
-			{/* Filters Skeleton */}
-			{/* <div className="flex items-center gap-4">
-				<Skeleton className="h-10 flex-1" />
-				<Skeleton className="h-10 w-[180px]" />
-				<Skeleton className="h-10 w-[180px]" />
-				<Skeleton className="h-10 w-10" />
-			</div> */}
-
+					{/* Filters Skeleton */}
+					<div className="flex items-center gap-4">
+						<Skeleton className="h-10 flex-1" />
+						<Skeleton className="h-10 w-[180px]" />
+						<Skeleton className="h-10 w-[180px]" />
+						<Skeleton className="h-10 w-10" />
+					</div>
+				</>
+			) : null}
 			{/* Games Grid Skeleton */}
 			<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{Array.from({ length: 8 }).map((_, i) => (

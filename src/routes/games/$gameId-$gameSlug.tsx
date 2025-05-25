@@ -1,10 +1,16 @@
 import { GameInfoGrid } from "@/components/games/game-info-grid";
 import { GameScreenshotsGallery } from "@/components/games/game-screenshots-gallery";
 import { GameStoreLinks } from "@/components/games/game-store-links";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { igdbApi } from "@/lib/api/igdb";
 import type { GameWithTimeToBeat } from "@/lib/api/igdb.types";
 import type { Screenshot, SimilarGame, Video } from "@/lib/api/igdb.types";
+import { isObject } from "@/lib/utils";
+import {
+	getResponsiveProgressiveImageUrls,
+	normalizeIGDBUrl,
+} from "@/lib/utils/image";
 import {
 	createFileRoute,
 	redirect,
@@ -87,6 +93,24 @@ const platformStoreMap: Record<
 function GameDetailsPage() {
 	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
 
+	// Get responsive image URLs for the cover
+	const getCoverImageUrl = () => {
+		if (!game.cover || !isObject(game.cover)) return null;
+
+		if (game.cover.image_id) {
+			const imageUrls = getResponsiveProgressiveImageUrls(game.cover.image_id);
+			return imageUrls.full;
+		}
+
+		if (game.cover.url) {
+			return normalizeIGDBUrl(game.cover.url);
+		}
+
+		return null;
+	};
+
+	const coverImageUrl = getCoverImageUrl();
+
 	return (
 		<div className="px-4 md:px-12 pb-8 pt-4">
 			<div className="flex flex-col md:flex-row gap-8 items-start">
@@ -165,15 +189,9 @@ function GameDetailsPage() {
 				<div className="w-full md:w-[340px] flex-shrink-0 md:sticky md:top-8 flex flex-col gap-6 items-center">
 					{/* Cover Art */}
 					<div className="bg-muted rounded-lg overflow-hidden w-full aspect-[3/4] shadow-md mb-2">
-						{game.cover && (
+						{coverImageUrl && (
 							<img
-								src={
-									game.cover.image_id
-										? `//images.igdb.com/igdb/image/upload/t_1080p/${game.cover.image_id}.webp`
-										: game.cover.url.startsWith("//")
-											? `https:${game.cover.url}`
-											: game.cover.url
-								}
+								src={coverImageUrl}
 								alt={game.name}
 								className="object-cover w-full h-full"
 							/>
