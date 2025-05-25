@@ -18,24 +18,17 @@ import { isObject } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { Filter, Search, Star } from "lucide-react";
-import { useEffect, useState } from "react";
+import { parseAsString, useQueryState } from "nuqs";
 import { useDebounce } from "use-debounce";
 import { GameImage } from "./game-image";
 import { GamesSkeleton } from "./skeleton";
 
-// SearchInput component - handles search state internally to prevent grid re-renders
-type SearchInputProps = {
-	onSearchChange: (search: string) => void;
-};
-
-const SearchInput = ({ onSearchChange }: SearchInputProps) => {
-	const [search, setSearch] = useState("");
-	const [debouncedSearch] = useDebounce(search, 400);
-
-	// Update parent when debounced search changes
-	useEffect(() => {
-		onSearchChange(debouncedSearch);
-	}, [debouncedSearch, onSearchChange]);
+// SearchInput component - now uses URL search params
+const SearchInput = () => {
+	const [search, setSearch] = useQueryState(
+		"search",
+		parseAsString.withDefault(""),
+	);
 
 	return (
 		<div className="relative flex-1">
@@ -45,7 +38,7 @@ const SearchInput = ({ onSearchChange }: SearchInputProps) => {
 				placeholder="Search games..."
 				className="pl-8"
 				value={search}
-				onChange={(e) => setSearch(e.target.value)}
+				onChange={(e) => setSearch(e.target.value || null)}
 			/>
 		</div>
 	);
@@ -54,19 +47,18 @@ const SearchInput = ({ onSearchChange }: SearchInputProps) => {
 // No props needed - component is now self-contained
 /**
  * SearchableGameGrid displays search/filters and a grid of game cards.
- * Now optimized to prevent unnecessary re-renders during search input.
+ * Now uses URL search params for search state management.
  */
 export const SearchableGameGrid = () => {
-	const [debouncedSearch, setDebouncedSearch] = useState("");
+	const [search] = useQueryState("search", parseAsString.withDefault(""));
+	const [debouncedSearch] = useDebounce(search, 400);
 
-	const gamesQuery = useQuery(
+	const { data: games = [], isLoading } = useQuery(
 		debouncedSearch
 			? searchGamesQueryOptions(debouncedSearch)
 			: mostAnticipatedGamesQueryOptions,
 	);
 
-	const games = gamesQuery.data || [];
-	const isLoading = gamesQuery.isLoading;
 	const hasSearchTerm = debouncedSearch.trim().length > 0;
 	const showNoResults = !isLoading && games.length === 0 && hasSearchTerm;
 
@@ -77,7 +69,7 @@ export const SearchableGameGrid = () => {
 
 			{/* Filters */}
 			<div className="flex items-center gap-4">
-				<SearchInput onSearchChange={setDebouncedSearch} />
+				<SearchInput />
 				<Select defaultValue="all">
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Platform" />
@@ -123,14 +115,14 @@ export const SearchableGameGrid = () => {
 					{games.map((game, index) => (
 						<Card
 							key={game.id}
-							className="group overflow-hidden hover:shadow-2xl focus-within:shadow-2xl transition-all duration-300 p-0 relative bg-gradient-to-b from-neutral-900 to-black border-neutral-800 hover:border-neutral-600 focus-within:border-neutral-600"
+							className="group overflow-hidden hover:shadow-2xl transition-all duration-300 p-0 relative bg-gradient-to-b from-neutral-900 to-black border-neutral-800 hover:border-neutral-600"
 						>
 							<Link
 								to="/games/$gameId-$gameSlug"
 								params={{
 									"gameId-$gameSlug": `${game.id}-${game.slug}`,
 								}}
-								className="block h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900"
+								className="block h-full"
 								viewTransition
 							>
 								<div className="relative">
@@ -144,7 +136,7 @@ export const SearchableGameGrid = () => {
 									<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
 									{/* Star button */}
-									<div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200">
+									<div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
 										<Button
 											variant="secondary"
 											size="icon"
@@ -156,12 +148,12 @@ export const SearchableGameGrid = () => {
 
 									{/* Game info overlay */}
 									<div className="absolute bottom-0 left-0 right-0 p-4">
-										<h3 className="text-white font-bold text-lg leading-tight group-hover:text-blue-400 group-focus-within:text-blue-400 transition-colors duration-200">
+										<h3 className="text-white font-bold text-lg leading-tight group-hover:text-blue-400 transition-colors duration-200">
 											{game.name}
 										</h3>
 
 										{/* Additional info - positioned absolutely to not affect title position */}
-										<div className="absolute bottom-full left-0 right-0 p-4 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 group-focus-within:translate-y-0">
+										<div className="absolute bottom-full left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
 											{/* Basic info */}
 											<div className="flex items-center gap-2 text-sm text-neutral-300 mb-3">
 												<span className="px-2 py-1 bg-neutral-800/80 rounded text-xs font-medium">

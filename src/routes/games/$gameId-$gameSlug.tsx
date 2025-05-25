@@ -186,7 +186,7 @@ function GameDetailsPage() {
 				</div>
 
 				{/* Right/Sidebar Column */}
-				<div className="w-full md:w-[340px] flex-shrink-0 md:sticky md:top-8 flex flex-col gap-6 items-center">
+				<div className="w-full md:w-[340px] flex-shrink-0 md:top-8 flex flex-col gap-6 items-center">
 					{/* Cover Art */}
 					<div className="bg-muted rounded-lg overflow-hidden w-full aspect-[3/4] shadow-md mb-2">
 						{coverImageUrl && (

@@ -2,6 +2,7 @@ import { scan } from "react-scan";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
+import { NuqsAdapter } from 'nuqs/adapters/react'
 
 import { ThemeProvider } from "./components/theme-provider";
 import * as TanStackQueryProvider from "./integrations/tanstack-query/root-provider.tsx";
@@ -42,9 +43,11 @@ if (rootElement && !rootElement.innerHTML) {
 	root.render(
 		<StrictMode>
 			<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-				<TanStackQueryProvider.Provider>
-					<RouterProvider router={router} />
-				</TanStackQueryProvider.Provider>
+				<NuqsAdapter>
+					<TanStackQueryProvider.Provider>
+						<RouterProvider router={router} />
+					</TanStackQueryProvider.Provider>
+				</NuqsAdapter>
 			</ThemeProvider>
 		</StrictMode>,
 	);
