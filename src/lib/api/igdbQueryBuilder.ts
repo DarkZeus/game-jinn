@@ -6,10 +6,15 @@ import type { IGDBRelation } from "./igdb.types";
 
 export class IGDBQueryBuilder {
 	private fields: string[] = ["*"];
+	private searchClause: string;
 	private whereClause: string;
 
-	constructor(whereClause: string) {
-		this.whereClause = whereClause;
+	constructor({
+		search = "",
+		where = "",
+	}: { search?: string; where?: string }) {
+		this.searchClause = search;
+		this.whereClause = where;
 	}
 
 	with(relation: IGDBRelation, fields?: string[]) {
@@ -22,11 +27,31 @@ export class IGDBQueryBuilder {
 	}
 
 	build() {
-		// Ensure both fields and where clause end with a semicolon
+		// Build the query parts
 		const fieldsPart = `fields ${this.fields.join(",")};`;
-		const wherePart = this.whereClause.trim().endsWith(";")
-			? this.whereClause.trim()
-			: `${this.whereClause.trim()};`;
-		return `${fieldsPart} ${wherePart}`.trim();
+
+		const parts = [fieldsPart];
+
+		// Add search clause if provided
+		if (this.searchClause.trim()) {
+			const searchPart = this.searchClause.trim().endsWith(";")
+				? this.searchClause.trim()
+				: `search "${this.searchClause.trim()}";`;
+			parts.push(searchPart);
+		}
+
+		// Add where clause if provided
+		if (this.whereClause.trim()) {
+			const wherePart = this.whereClause.trim().startsWith("where")
+				? this.whereClause.trim().endsWith(";")
+					? this.whereClause.trim()
+					: `${this.whereClause.trim()};`
+				: this.whereClause.trim().endsWith(";")
+					? `where ${this.whereClause.trim()}`
+					: `where ${this.whereClause.trim()};`;
+			parts.push(wherePart);
+		}
+
+		return parts.join(" ");
 	}
 }

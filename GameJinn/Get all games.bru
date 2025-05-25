@@ -19,5 +19,5 @@ auth:bearer {
 }
 
 body:text {
-  fields *; limit 10; where id = 302704;
+  fields *,websites.*,cover.url,cover.image_id,screenshots.url,screenshots.image_id,alternative_names.*,franchises.*,game_engines.*,genres.*,game_modes.*,involved_companies.*,keywords.*,platforms.*,player_perspectives.*,similar_games.*,videos.*; where game_type.type != 'mod'; limit 20;
 }

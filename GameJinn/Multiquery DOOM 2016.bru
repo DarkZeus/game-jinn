@@ -45,13 +45,13 @@ body:text {
       artworks.image_id,
       artworks.url,
       dlcs.name;
-    where id = 7351;
+    where id = 163114;
     limit 1;
     exclude tags;
   };
   
   query game_time_to_beats "Game with time to beat" {
     fields *;
-    where game_id = 7351;
+    where game_id = 163114;
   };
 }

@@ -47,6 +47,7 @@ const defaultFields: [IGDBRelation, string[]?][] = [
 	["player_perspectives"],
 	["similar_games"],
 	["videos"],
+	["game_type"],
 ];
 
 /**
@@ -75,9 +76,7 @@ export const igdbApi = {
 		fields?: [IGDBRelation, string[]?][];
 		sort?: string;
 	}) => {
-		const builder = new IGDBQueryBuilder(
-			where ? `where ${where}` : search ? `search \"${search}\"` : "",
-		);
+		const builder = new IGDBQueryBuilder({ search, where });
 		for (const [relation, relFields] of fields) {
 			builder.with(relation, relFields);
 		}
@@ -152,7 +151,12 @@ query game_time_to_beats "Game with time to beat" {
 	},
 
 	searchGames: async (search: string, limit = 20) => {
-		return igdbApi.getGames({ search, limit });
+		return igdbApi.getGames({
+			search,
+			limit,
+			where:
+				'game_type.type != ("Mod","Bundle","Port") & version_parent = null',
+		});
 	},
 
 	multiquery,

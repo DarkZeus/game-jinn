@@ -17,5 +17,5 @@ headers {
 }
 
 body:text {
-  fields *; limit 10;
+  fields name,game_type.type; search "grand theft auto"; where game_type.type != ("Mod","Bundle","Port") & version_parent = null; limit 20;
 }
