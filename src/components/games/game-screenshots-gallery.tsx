@@ -1,9 +1,4 @@
-import type { Screenshot } from "@/lib/api/igdb.types";
-import { getScreenshotUrls, normalizeIGDBUrl } from "@/lib/utils/image";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { useLoaderData } from "@tanstack/react-router";
-import { useState } from "react";
-import { OptimizedImage } from "../ui/optimized-image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import {
 	Sheet,
 	SheetContent,
@@ -11,7 +6,12 @@ import {
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
-} from "../ui/sheet";
+} from "@/components/ui/sheet";
+import type { Screenshot } from "@/lib/api/igdb.types";
+import { getScreenshotUrls, normalizeIGDBUrl } from "@/lib/utils/image";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { useLoaderData } from "@tanstack/react-router";
+import { useState } from "react";
 
 /**
  * GameScreenshotsGallery renders a horizontal row of screenshots with dialogs for full view.

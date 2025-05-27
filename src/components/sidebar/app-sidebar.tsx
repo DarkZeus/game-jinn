@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import {
 	Sidebar,
 	SidebarContent,
@@ -11,7 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Gamepad2, LayoutDashboard } from "lucide-react";
-import { ModeToggle } from "../mode-toggle";
+import { NavUser } from "./nav-user";
 
 const navItems = [
 	{ icon: LayoutDashboard, label: "Dashboard", href: "/" },
@@ -69,7 +70,14 @@ export function AppSidebar() {
 				</SidebarGroup>
 			</SidebarContent>
 			<SidebarFooter>
-				<ModeToggle />
+				<NavUser
+					user={{
+						username: "Fuad",
+						displayName: "J. Doe",
+						avatar:
+							"https://avatars.fastly.steamstatic.com/bed7e16abb62b079a92c07cce6e4e2ed95ce6df9_full.jpg",
+					}}
+				/>
 			</SidebarFooter>
 		</Sidebar>
 	);

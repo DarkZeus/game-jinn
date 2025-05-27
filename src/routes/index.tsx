@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { createFileRoute } from "@tanstack/react-router";
-import { Award, Clock, Gamepad2, Star, TrendingUp, Trophy } from "lucide-react";
+import { Award, Clock, Gamepad2, Star, Trophy } from "lucide-react";
 import logo from "../logo.svg";
 
 export const Route = createFileRoute("/")({
