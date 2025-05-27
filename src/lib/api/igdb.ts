@@ -96,8 +96,8 @@ export const igdbApi = {
 		const multiqueryString = `
 query games "Games" {
   fields *,
-    websites.url,
-    websites.category,
+    websites.*,
+	websites.type.*,
     cover.image_id,
     cover.url,
     screenshots.image_id,

@@ -20,7 +20,7 @@ import { Route as CalendarImport } from './routes/calendar'
 import { Route as AchievementsImport } from './routes/achievements'
 import { Route as IndexImport } from './routes/index'
 import { Route as GamesIndexImport } from './routes/games/index'
-import { Route as GamesGameIdGameSlugImport } from './routes/games/$gameId-$gameSlug'
+import { Route as GamesGameIdWithSlugImport } from './routes/games/$gameIdWithSlug'
 import { Route as DemoTanstackQueryImport } from './routes/demo.tanstack-query'
 
 // Create/Update Routes
@@ -79,9 +79,9 @@ const GamesIndexRoute = GamesIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const GamesGameIdGameSlugRoute = GamesGameIdGameSlugImport.update({
-  id: '/games/$gameId-$gameSlug',
-  path: '/games/$gameId-$gameSlug',
+const GamesGameIdWithSlugRoute = GamesGameIdWithSlugImport.update({
+  id: '/games/$gameIdWithSlug',
+  path: '/games/$gameIdWithSlug',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -158,11 +158,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoTanstackQueryImport
       parentRoute: typeof rootRoute
     }
-    '/games/$gameId-$gameSlug': {
-      id: '/games/$gameId-$gameSlug'
-      path: '/games/$gameId-$gameSlug'
-      fullPath: '/games/$gameId-$gameSlug'
-      preLoaderRoute: typeof GamesGameIdGameSlugImport
+    '/games/$gameIdWithSlug': {
+      id: '/games/$gameIdWithSlug'
+      path: '/games/$gameIdWithSlug'
+      fullPath: '/games/$gameIdWithSlug'
+      preLoaderRoute: typeof GamesGameIdWithSlugImport
       parentRoute: typeof rootRoute
     }
     '/games/': {
@@ -187,7 +187,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/games/$gameId-$gameSlug': typeof GamesGameIdGameSlugRoute
+  '/games/$gameIdWithSlug': typeof GamesGameIdWithSlugRoute
   '/games': typeof GamesIndexRoute
 }
 
@@ -201,7 +201,7 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/games/$gameId-$gameSlug': typeof GamesGameIdGameSlugRoute
+  '/games/$gameIdWithSlug': typeof GamesGameIdWithSlugRoute
   '/games': typeof GamesIndexRoute
 }
 
@@ -216,7 +216,7 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/statistics': typeof StatisticsRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/games/$gameId-$gameSlug': typeof GamesGameIdGameSlugRoute
+  '/games/$gameIdWithSlug': typeof GamesGameIdWithSlugRoute
   '/games/': typeof GamesIndexRoute
 }
 
@@ -232,7 +232,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/statistics'
     | '/demo/tanstack-query'
-    | '/games/$gameId-$gameSlug'
+    | '/games/$gameIdWithSlug'
     | '/games'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -245,7 +245,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/statistics'
     | '/demo/tanstack-query'
-    | '/games/$gameId-$gameSlug'
+    | '/games/$gameIdWithSlug'
     | '/games'
   id:
     | '__root__'
@@ -258,7 +258,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/statistics'
     | '/demo/tanstack-query'
-    | '/games/$gameId-$gameSlug'
+    | '/games/$gameIdWithSlug'
     | '/games/'
   fileRoutesById: FileRoutesById
 }
@@ -273,7 +273,7 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   StatisticsRoute: typeof StatisticsRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
-  GamesGameIdGameSlugRoute: typeof GamesGameIdGameSlugRoute
+  GamesGameIdWithSlugRoute: typeof GamesGameIdWithSlugRoute
   GamesIndexRoute: typeof GamesIndexRoute
 }
 
@@ -287,7 +287,7 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   StatisticsRoute: StatisticsRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
-  GamesGameIdGameSlugRoute: GamesGameIdGameSlugRoute,
+  GamesGameIdWithSlugRoute: GamesGameIdWithSlugRoute,
   GamesIndexRoute: GamesIndexRoute,
 }
 
@@ -310,7 +310,7 @@ export const routeTree = rootRoute
         "/settings",
         "/statistics",
         "/demo/tanstack-query",
-        "/games/$gameId-$gameSlug",
+        "/games/$gameIdWithSlug",
         "/games/"
       ]
     },
@@ -341,8 +341,8 @@ export const routeTree = rootRoute
     "/demo/tanstack-query": {
       "filePath": "demo.tanstack-query.tsx"
     },
-    "/games/$gameId-$gameSlug": {
-      "filePath": "games/$gameId-$gameSlug.tsx"
+    "/games/$gameIdWithSlug": {
+      "filePath": "games/$gameIdWithSlug.tsx"
     },
     "/games/": {
       "filePath": "games/index.tsx"

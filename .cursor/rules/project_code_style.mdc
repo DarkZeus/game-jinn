@@ -16,5 +16,5 @@ alwaysApply: true
 2. Request code samples if necessary to provide tailored solutions
 3. Provide complete, well-commented code examples
 4. Explain implementation decisions
-
 5. Follow modern best practices while adhering to project coding standards
+6. Don't use classes for JavaScript, tend more into functional approach.

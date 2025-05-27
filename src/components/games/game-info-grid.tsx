@@ -11,6 +11,7 @@ import type {
 	PlayerPerspective,
 	Website,
 } from "@/lib/api/igdb.types";
+import { formatReleaseDate } from "@/lib/utils/date";
 import { useLoaderData } from "@tanstack/react-router";
 
 /**
@@ -18,7 +19,7 @@ import { useLoaderData } from "@tanstack/react-router";
  * Uses router context for data (no prop drilling).
  */
 export const GameInfoGrid = () => {
-	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
+	const { game } = useLoaderData({ from: "/games/$gameIdWithSlug" });
 
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-muted/40 rounded-lg p-4">
@@ -46,7 +47,7 @@ export const GameInfoGrid = () => {
 				<h4 className="text-sm font-medium mb-1">Release Date</h4>
 				<div>
 					{game.first_release_date ? (
-						new Date(game.first_release_date * 1000).toLocaleDateString()
+						formatReleaseDate(game.first_release_date)
 					) : (
 						<span className="text-muted-foreground">TBA</span>
 					)}
@@ -108,17 +109,29 @@ export const GameInfoGrid = () => {
 				<h4 className="text-sm font-medium mb-1">Involved Companies</h4>
 				<div>
 					{game.involved_companies?.length ? (
-						game.involved_companies.map((ic: InvolvedCompany) => (
-							<span key={ic.id} className="inline-block mr-2">
-								{ic.company && (
-									<>
-										{ic.company.name}
-										{ic.developer && " (Developer)"}
-										{ic.publisher && " (Publisher)"}
-									</>
-								)}
-							</span>
-						))
+						<span>
+							{new Intl.ListFormat("en-US", {
+								style: "long",
+								type: "conjunction",
+							}).format(
+								game.involved_companies
+									.filter(
+										(
+											ic: InvolvedCompany,
+										): ic is InvolvedCompany & {
+											company: NonNullable<InvolvedCompany["company"]>;
+										} => !!ic.company,
+									)
+									.map((ic) => {
+										const roles = [];
+										if (ic.developer) roles.push("Developer");
+										if (ic.publisher) roles.push("Publisher");
+										const roleText =
+											roles.length > 0 ? ` (${roles.join(", ")})` : "";
+										return `${ic.company.name}${roleText}`;
+									}),
+							)}
+						</span>
 					) : (
 						<span className="text-muted-foreground">N/A</span>
 					)}

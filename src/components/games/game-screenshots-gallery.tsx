@@ -12,14 +12,13 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "../ui/sheet";
-import { GameImage } from "./game-image";
 
 /**
  * GameScreenshotsGallery renders a horizontal row of screenshots with dialogs for full view.
  * Uses router context for game data.
  */
 export const GameScreenshotsGallery = () => {
-	const { game } = useLoaderData({ from: "/games/$gameId-$gameSlug" });
+	const { game } = useLoaderData({ from: "/games/$gameIdWithSlug" });
 	const images: Screenshot[] =
 		Array.from([...(game.screenshots || []), ...(game.artworks || [])]) || [];
 
@@ -84,7 +83,7 @@ export const GameScreenshotsGallery = () => {
 									src={imageUrls.fullRes}
 									thumbSrc={imageUrls.fullResThumb}
 									alt={`${game.name} screenshot`}
-									className="max-w-[90dvw] max-h-[90dvh] object-cover rounded-lg"
+									className="max-w-[90dvw] max-h-[90dvh] object-cover rounded-lg overflow-hidden"
 									priority={true}
 								/>
 							</SheetContent>

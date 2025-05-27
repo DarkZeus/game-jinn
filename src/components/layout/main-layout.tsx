@@ -15,7 +15,7 @@ export function MainLayout({ children }: MainLayoutProps) {
 		<SidebarProvider>
 			<AppSidebar />
 			<SidebarInset>
-				<main className="p-8">{children}</main>
+				<main>{children}</main>
 			</SidebarInset>
 		</SidebarProvider>
 	);
