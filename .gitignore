@@ -33,6 +33,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.cursor
 
 # Debug logs
 npm-debug.log*
